@@ -2305,19 +2305,32 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 12px;
+        width: 100%;
+        overflow: hidden;
       }
 
       .hero-banner-card {
         min-height: 292px;
         aspect-ratio: 1 / .88;
+        width: 100%;
+        max-width: 100%;
+        transform: translateZ(0);
       }
 
       .hero-banner-card img {
         min-height: 292px;
+        transform: none;
+        transition: none;
+        animation: none;
       }
 
       .hero-tiger img {
-        object-position: 50% top;
+        object-position: center top;
+      }
+
+      .hero-banner-card:hover img,
+      .hero-tiger:hover .hero-card-bg {
+        transform: none;
       }
 
       .hero-banner-card::before {
@@ -2329,7 +2342,7 @@
       }
 
       .hero-tiger .hero-card-bg {
-        object-position: 56% center;
+        object-position: 56% top;
         opacity: .9;
       }
 
