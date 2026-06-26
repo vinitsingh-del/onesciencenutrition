@@ -1,0 +1,2428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Science Nutrition - Premium Sports Nutrition India</title>
+  <meta name="description" content="A premium redesign concept for One Science Nutrition India using original captured assets.">
+  <style>
+    @font-face {
+      font-family: "Instrument Sans";
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+      src: url("https://onesciencenutrition.in/cdn/fonts/instrument_sans/instrumentsans_n7.e4ad9032e203f9a0977786c356573ced65a7419a.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: Figtree;
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+      src: url("https://onesciencenutrition.in/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2") format("woff2");
+    }
+
+    :root {
+      --ink: #080806;
+      --ink-2: #171511;
+      --carbon: #23201a;
+      --gold: #f6c31c;
+      --gold-2: #ffe16b;
+      --smoke: #f6f2e8;
+      --paper: #fffaf0;
+      --line: rgba(8, 8, 6, .14);
+      --muted: #706755;
+      --white: #fff;
+      --green: #1b7f3b;
+      --red: #d02a1d;
+      --max: 1440px;
+      --gutter: clamp(16px, 4vw, 56px);
+      --radius: 8px;
+      --shadow: 0 18px 48px rgba(8, 8, 6, .18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Figtree, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    .button {
+      min-height: 44px;
+      border: 0;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      background: var(--ink);
+      color: var(--gold-2);
+      font: 800 12px/1 Figtree, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease, color .18s ease;
+    }
+
+    button:hover,
+    .button:hover {
+      transform: translateY(-2px);
+      background: #000;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 4px;
+    }
+
+    .shell {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+      padding-inline: var(--gutter);
+    }
+
+    .utility {
+      background: var(--ink);
+      color: var(--gold-2);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .utility .shell {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 250, 240, .92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav .shell {
+      min-height: 72px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .links {
+      display: none;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .links a {
+      min-width: 44px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 18px;
+      padding: 0;
+    }
+
+    .hero {
+      min-height: min(820px, calc(100svh - 110px));
+      background:
+        radial-gradient(circle at 70% 10%, rgba(246, 195, 28, .18), transparent 30%),
+        linear-gradient(135deg, #050505 0%, #100e0a 52%, #050505 100%);
+      color: var(--white);
+      position: relative;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 18%;
+      background: linear-gradient(0deg, var(--paper), rgba(255, 250, 240, 0));
+      pointer-events: none;
+    }
+
+    .hero .shell {
+      position: relative;
+      z-index: 1;
+      padding-block: 34px 44px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-layout {
+      display: grid;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .hero-main {
+      display: grid;
+      gap: 14px;
+      max-width: 780px;
+    }
+
+    .hero-heading {
+      display: grid;
+      gap: 14px;
+      max-width: 950px;
+    }
+
+    .hero-banner-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .hero-banner-card {
+      min-height: 310px;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid rgba(246, 195, 28, .28);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .08);
+      color: var(--white);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(18px) saturate(1.22);
+    }
+
+    .hero-banner-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(8, 8, 6, .92), rgba(8, 8, 6, .34) 58%, rgba(8, 8, 6, .08));
+      pointer-events: none;
+    }
+
+    .hero-banner-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 310px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .5s ease;
+    }
+
+    .hero-banner-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-tiger img {
+      object-position: 62% center;
+    }
+
+    .hero-banner-copy {
+      position: absolute;
+      left: clamp(18px, 4vw, 34px);
+      bottom: clamp(18px, 4vw, 34px);
+      z-index: 2;
+      display: grid;
+      gap: 10px;
+      width: min(460px, calc(100% - 36px));
+    }
+
+    .hero-banner-copy small {
+      color: var(--gold-2);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .hero-banner-copy b {
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: clamp(28px, 4.8vw, 58px);
+      line-height: .92;
+      text-transform: uppercase;
+    }
+
+    .hero-banner-copy em {
+      width: fit-content;
+      min-height: 42px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 14px;
+      background: var(--gold);
+      color: var(--ink);
+      font-style: normal;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .kicker {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      color: var(--gold-2);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 42px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      line-height: .94;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 820px;
+      font-size: clamp(34px, 6.2vw, 78px);
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(34px, 6vw, 76px);
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: clamp(22px, 2.8vw, 36px);
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      color: rgba(255, 255, 255, .78);
+      font-size: clamp(16px, 1.55vw, 20px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-title-rail {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 720px;
+    }
+
+    .hero-title-rail span {
+      min-height: 36px;
+      border: 1px solid rgba(246, 195, 28, .44);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 13px;
+      background: rgba(8, 8, 6, .54);
+      color: var(--gold-2);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+
+    .banner-head-reel {
+      display: grid;
+      gap: 12px;
+      margin-top: 0;
+    }
+
+    .banner-head-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: end;
+      justify-content: space-between;
+    }
+
+    .banner-head-top h2 {
+      max-width: 760px;
+      font-size: clamp(24px, 3.7vw, 44px);
+    }
+
+    .banner-dots {
+      display: flex;
+      gap: 7px;
+      padding-bottom: 4px;
+    }
+
+    .banner-dots span {
+      width: 26px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .36);
+    }
+
+    .banner-dots span:first-child {
+      background: var(--gold);
+    }
+
+    .banner-window {
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(246, 195, 28, .36);
+      background: rgba(8, 8, 6, .7);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
+    }
+
+    .banner-track {
+      display: flex;
+      width: 300%;
+      animation: bannerCycle 15s ease-in-out infinite;
+    }
+
+    .banner-track .promo-banner {
+      width: 33.333%;
+      min-height: 218px;
+      border-radius: 0;
+      box-shadow: none;
+      flex: 0 0 33.333%;
+    }
+
+    .banner-track .promo-banner img {
+      min-height: 218px;
+    }
+
+    @keyframes bannerCycle {
+      0%, 27% {
+        transform: translateX(0);
+      }
+      34%, 61% {
+        transform: translateX(-33.333%);
+      }
+      68%, 94% {
+        transform: translateX(-66.666%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .button.gold {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .button.ghost {
+      border: 1px solid rgba(255, 255, 255, .34);
+      background: rgba(255, 255, 255, .08);
+      color: var(--white);
+    }
+
+    .hero-panel {
+      width: min(100%, 780px);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(8, 8, 6, .72);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-offer {
+      width: min(100%, 760px);
+      border: 1px solid rgba(246, 195, 28, .38);
+      border-radius: var(--radius);
+      background: rgba(8, 8, 6, .84);
+      box-shadow: 0 26px 80px rgba(0, 0, 0, .34);
+      padding: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .offer-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .offer-price {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .offer-price strong {
+      color: var(--gold-2);
+      font: 700 38px/1 "Instrument Sans", Figtree, sans-serif;
+    }
+
+    .offer-price s {
+      color: rgba(255, 255, 255, .48);
+      font-weight: 800;
+    }
+
+    .offer-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      display: grid;
+      gap: 9px;
+      color: rgba(255, 255, 255, .78);
+      font-weight: 700;
+    }
+
+    .hero-offer .button {
+      width: 100%;
+    }
+
+    .offer-list li::before {
+      content: "+";
+      color: var(--gold);
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .trust-pill {
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 6px;
+      padding: 10px 8px;
+      color: rgba(255, 255, 255, .74);
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .hero-stat {
+      min-height: 96px;
+      padding: 18px;
+      border-right: 1px solid rgba(255, 255, 255, .12);
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .hero-stat b {
+      display: block;
+      color: var(--gold-2);
+      font-size: 26px;
+      line-height: 1;
+      font-family: "Instrument Sans", Figtree, sans-serif;
+    }
+
+    .hero-stat span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, .68);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .strip {
+      background: var(--gold);
+      border-block: 1px solid var(--ink);
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    .cro-band {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cro-band .shell {
+      display: grid;
+      gap: 1px;
+      padding-block: 0;
+    }
+
+    .cro-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: center;
+      min-height: 76px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cro-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      background: var(--ink);
+      color: var(--gold-2);
+      font-weight: 900;
+    }
+
+    .cro-item b {
+      display: block;
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .cro-item span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .strip-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 24s linear infinite;
+    }
+
+    .strip span {
+      padding: 13px 18px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .stats-band {
+      padding-block: 0;
+      background: var(--ink);
+    }
+
+    .stats-band .shell {
+      padding-block: 18px;
+    }
+
+    .stats-panel {
+      width: 100%;
+      border-color: rgba(246, 195, 28, .34);
+      border-radius: var(--radius);
+      background: #0d0b08;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .promo-banner {
+      min-height: 260px;
+      position: relative;
+      isolation: isolate;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .promo-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(90deg, rgba(8, 8, 6, .82), rgba(8, 8, 6, .22) 62%, rgba(8, 8, 6, .06));
+    }
+
+    .promo-banner img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .promo-banner:hover img {
+      transform: scale(1.03);
+    }
+
+    .banner-copy {
+      position: absolute;
+      left: clamp(16px, 4vw, 34px);
+      bottom: clamp(16px, 4vw, 34px);
+      z-index: 1;
+      display: grid;
+      gap: 8px;
+      width: min(430px, calc(100% - 32px));
+    }
+
+    .banner-copy small {
+      color: var(--gold-2);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .banner-copy b {
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: clamp(24px, 3.5vw, 44px);
+      line-height: .95;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .banner-cta {
+      width: fit-content;
+      min-height: 40px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 4px;
+      padding: 0 13px;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .category-section {
+      background:
+        linear-gradient(180deg, var(--paper), #f1eadc);
+      padding-block: clamp(48px, 7vw, 92px);
+    }
+
+    .compact-head {
+      grid-template-columns: 1fr;
+      margin-bottom: 22px;
+    }
+
+    .category-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .category-pill {
+      min-height: 190px;
+      border: 1px solid rgba(8, 8, 6, .12);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .58)),
+        var(--white);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 118px;
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+      box-shadow: 0 18px 44px rgba(8, 8, 6, .08);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .category-pill:hover {
+      transform: translateY(-3px);
+      border-color: rgba(246, 195, 28, .72);
+      box-shadow: 0 24px 54px rgba(8, 8, 6, .12);
+    }
+
+    .category-pill img {
+      width: 100%;
+      height: 136px;
+      object-fit: contain;
+      align-self: center;
+      justify-self: end;
+    }
+
+    .category-copy {
+      display: grid;
+      gap: 9px;
+      min-width: 0;
+    }
+
+    .category-copy small {
+      color: #9a7500;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .category-copy b {
+      color: var(--ink);
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: clamp(22px, 5vw, 34px);
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .category-copy span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .category-action {
+      width: fit-content;
+      min-height: 34px;
+      border: 1px solid rgba(8, 8, 6, .14);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .flash-sale {
+      padding-block: 0;
+      background: var(--gold);
+      border-block: 1px solid var(--ink);
+    }
+
+    .flash-layout {
+      display: grid;
+      gap: 18px;
+      align-items: center;
+      padding-block: 24px;
+    }
+
+    .flash-layout .kicker {
+      color: var(--ink);
+    }
+
+    .flash-layout .kicker::before {
+      background: var(--ink);
+    }
+
+    .flash-layout h2 {
+      font-size: clamp(30px, 5vw, 58px);
+    }
+
+    .flash-layout p {
+      max-width: 640px;
+      margin: 12px 0 0;
+      color: rgba(8, 8, 6, .72);
+      font-weight: 800;
+    }
+
+    .flash-deal {
+      min-height: 112px;
+      border: 1px solid rgba(8, 8, 6, .24);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .42);
+      padding: 14px;
+      display: grid;
+      align-content: center;
+      gap: 4px;
+      color: var(--ink);
+    }
+
+    .flash-deal span,
+    .flash-deal small {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .flash-deal strong {
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: .9;
+    }
+
+    .goal-quiz {
+      background: var(--ink);
+      color: var(--white);
+      padding-block: clamp(48px, 7vw, 88px);
+    }
+
+    .quiz-layout {
+      display: grid;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .quiz-layout p {
+      max-width: 650px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 18px;
+    }
+
+    .quiz-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .quiz-chip {
+      min-height: 58px;
+      border: 1px solid rgba(246, 195, 28, .34);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      color: var(--gold-2);
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .video-proof {
+      background: var(--smoke);
+    }
+
+    .video-layout {
+      display: grid;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .video-copy p {
+      max-width: 580px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .video-frame {
+      position: relative;
+      min-height: 260px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .video-frame img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
+    .play-mark {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      min-height: 44px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 18px;
+      background: rgba(8, 8, 6, .72);
+      color: var(--gold-2);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .cert-section {
+      background: var(--white);
+      padding-block: clamp(48px, 7vw, 88px);
+    }
+
+    .cert-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .cert-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: var(--paper);
+      min-height: 138px;
+    }
+
+    .cert-item b {
+      display: block;
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: 24px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .cert-item span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .newsletter {
+      padding-block: 0;
+      background: var(--ink);
+      color: var(--white);
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .newsletter-layout {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      padding-block: 28px;
+    }
+
+    .newsletter h2 {
+      font-size: clamp(28px, 5vw, 56px);
+    }
+
+    .newsletter-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .newsletter-form input {
+      min-height: 50px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 6px;
+      padding: 0 14px;
+      background: rgba(255, 255, 255, .08);
+      color: var(--white);
+      font: 800 16px/1 Figtree, sans-serif;
+    }
+
+    .newsletter-form input::placeholder {
+      color: rgba(255, 255, 255, .54);
+    }
+
+    .hero-offer,
+    .stats-panel,
+    .category-pill,
+    .flash-deal,
+    .spotlight,
+    .info-card,
+    .mini-product,
+    .goal-card,
+    .proof-card,
+    .review-card,
+    .cert-item,
+    .video-frame,
+    .kit-image,
+    .bundle-option,
+    .metric,
+    .quiz-chip {
+      border: 1px solid rgba(246, 195, 28, .22);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .04));
+      box-shadow: 0 22px 70px rgba(8, 8, 6, .18);
+      backdrop-filter: blur(18px) saturate(1.18);
+    }
+
+    .category-pill,
+    .mini-product,
+    .review-card,
+    .cert-item {
+      border-color: rgba(8, 8, 6, .12);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .78), rgba(255, 255, 255, .42));
+    }
+
+    section {
+      padding-block: clamp(60px, 9vw, 124px);
+    }
+
+    .section-head {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .section-head p {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .goal-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .goal-card {
+      min-height: 300px;
+      position: relative;
+      isolation: isolate;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .goal-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .74;
+      transition: transform .5s ease;
+    }
+
+    .goal-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .goal-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(8, 8, 6, .86), rgba(8, 8, 6, .08));
+    }
+
+    .goal-card-content {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 22px;
+      z-index: 1;
+    }
+
+    .goal-card p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, .75);
+      max-width: 390px;
+    }
+
+    .featured {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .product-stage {
+      display: grid;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .spotlight {
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 28% 16%, rgba(246, 195, 28, .26), transparent 30%),
+        linear-gradient(140deg, #16130d, #050505 70%);
+      min-height: 560px;
+      padding: clamp(18px, 4vw, 42px);
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .spotlight img {
+      width: min(92%, 760px);
+      margin: 0 auto;
+      filter: drop-shadow(0 34px 34px rgba(0, 0, 0, .5));
+    }
+
+    .spotlight-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .product-info {
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-card {
+      border-radius: var(--radius);
+      background: #12100c;
+      border: 1px solid rgba(255, 255, 255, .12);
+      padding: 22px;
+    }
+
+    .buy-box {
+      background: var(--gold);
+      color: var(--ink);
+      border: 0;
+    }
+
+    .buy-box p {
+      color: rgba(8, 8, 6, .72);
+      font-weight: 700;
+    }
+
+    .buy-box .price {
+      color: var(--ink);
+    }
+
+    .buy-box .metric {
+      border-color: rgba(8, 8, 6, .18);
+      color: rgba(8, 8, 6, .72);
+      background: rgba(255, 255, 255, .36);
+    }
+
+    .buy-box .metric b {
+      color: var(--ink);
+    }
+
+    .bundle-row {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .bundle-option {
+      min-height: 58px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid rgba(8, 8, 6, .18);
+      border-radius: 6px;
+      padding: 12px;
+      background: rgba(255, 255, 255, .52);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .bundle-option small {
+      display: block;
+      color: rgba(8, 8, 6, .62);
+      font-size: 12px;
+      margin-top: 3px;
+      text-transform: none;
+    }
+
+    .info-card p {
+      color: rgba(255, 255, 255, .68);
+      margin: 12px 0 0;
+    }
+
+    .proof-list {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .proof-list span {
+      min-height: 38px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      color: rgba(255, 255, 255, .76);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .proof-list span::before {
+      content: "+";
+      color: var(--gold);
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    .price {
+      color: var(--gold-2);
+      font-size: 32px;
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      margin-top: 14px;
+    }
+
+    .stack {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .metric {
+      border: 1px solid rgba(246, 195, 28, .3);
+      border-radius: 6px;
+      padding: 14px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .metric b {
+      display: block;
+      color: var(--gold-2);
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: 25px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .rail {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mini-product {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mini-product figure {
+      aspect-ratio: 1 / 1;
+      margin: 0;
+      background: #f4efe4;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+    }
+
+    .mini-product img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .mini-product div {
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .mini-product h3 {
+      font-size: 16px;
+      line-height: 1.08;
+    }
+
+    .mini-product p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .flavour {
+      padding-block: 0;
+      background: var(--smoke);
+    }
+
+    .flavour img {
+      width: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+
+    .proof-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .sticky-buy {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 12px;
+      border: 1px solid rgba(246, 195, 28, .28);
+      border-radius: 8px;
+      background: rgba(8, 8, 6, .74);
+      color: var(--white);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .42);
+      backdrop-filter: blur(18px) saturate(1.3);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(110%);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .sticky-buy.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .sticky-buy b {
+      display: block;
+      color: var(--gold-2);
+      line-height: 1;
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: 16px;
+    }
+
+    .sticky-buy span {
+      display: block;
+      margin-top: 3px;
+      color: rgba(255, 255, 255, .62);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .sticky-meta {
+      display: grid;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .sticky-notice {
+      width: fit-content;
+      min-height: 24px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 9px;
+      background: rgba(246, 195, 28, .16);
+      color: var(--gold-2);
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .sticky-notice::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(27, 127, 59, .2);
+    }
+
+    .sticky-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .sticky-trust i {
+      min-height: 26px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 8px;
+      color: rgba(255, 255, 255, .72);
+      font-style: normal;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .proof-card {
+      border-top: 2px solid var(--ink);
+      padding-top: 18px;
+    }
+
+    .proof-card b {
+      font-family: "Instrument Sans", Figtree, sans-serif;
+      font-size: clamp(38px, 8vw, 82px);
+      line-height: .9;
+    }
+
+    .proof-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    .reviews {
+      background:
+        radial-gradient(circle at 18% 18%, rgba(246, 195, 28, .13), transparent 28%),
+        linear-gradient(135deg, #050505, #15120c 58%, #050505);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .reviews .section-head {
+      grid-template-columns: minmax(0, 1fr);
+      align-items: end;
+    }
+
+    .reviews .section-head p:not(.kicker) {
+      color: rgba(255, 255, 255, .68);
+    }
+
+    .review-marquee {
+      position: relative;
+      overflow: hidden;
+      margin-inline: calc(var(--gutter) * -1);
+      padding-block: 8px 12px;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .review-track {
+      width: max-content;
+      display: flex;
+      gap: 16px;
+      animation: reviewFlow 34s linear infinite;
+    }
+
+    .review-marquee:hover .review-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes reviewFlow {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .review-card {
+      width: min(78vw, 430px);
+      border: 1px solid rgba(246, 195, 28, .26);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      min-height: 190px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .05));
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .26);
+      backdrop-filter: blur(18px) saturate(1.2);
+      flex: 0 0 auto;
+    }
+
+    .review-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .review-card div {
+      padding: 20px;
+      display: grid;
+      align-content: center;
+      gap: 10px;
+    }
+
+    .stars {
+      width: fit-content;
+      min-height: 28px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      background: rgba(246, 195, 28, .14);
+      color: var(--gold-2);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .review-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, .82);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .kit {
+      background: var(--ink);
+      color: var(--white);
+      padding-bottom: 0;
+    }
+
+    .kit-layout {
+      display: grid;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .kit-copy p {
+      color: rgba(255, 255, 255, .72);
+      max-width: 620px;
+      font-size: 18px;
+    }
+
+    .kit-image {
+      align-self: end;
+      background: var(--gold);
+      border-radius: var(--radius) var(--radius) 0 0;
+      padding: 18px 18px 0;
+    }
+
+    .kit-image img {
+      margin: 0 auto;
+      max-height: 620px;
+      object-fit: contain;
+    }
+
+    .hero-offer,
+    .stats-panel,
+    .category-pill,
+    .flash-deal,
+    .spotlight,
+    .info-card,
+    .mini-product,
+    .goal-card,
+    .proof-card,
+    .review-card,
+    .cert-item,
+    .video-frame,
+    .kit-image,
+    .bundle-option,
+    .metric,
+    .quiz-chip {
+      border: 1px solid rgba(246, 195, 28, .24);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .05));
+      box-shadow: 0 22px 70px rgba(8, 8, 6, .2);
+      backdrop-filter: blur(18px) saturate(1.18);
+    }
+
+    .category-pill,
+    .mini-product,
+    .review-card,
+    .cert-item {
+      border-color: rgba(8, 8, 6, .12);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .82), rgba(255, 255, 255, .44));
+    }
+
+    .buy-box {
+      background:
+        linear-gradient(135deg, rgba(246, 195, 28, .92), rgba(255, 225, 107, .64));
+    }
+
+    footer {
+      background: #050505;
+      color: var(--white);
+      padding-block: 34px;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    footer .shell {
+      display: grid;
+      gap: 22px;
+    }
+
+    footer img {
+      width: 138px;
+      filter: brightness(1.08);
+    }
+
+    footer p {
+      margin: 0;
+      color: rgba(255, 255, 255, .62);
+    }
+
+    @media (min-width: 640px) {
+      .cro-band .shell {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .category-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cert-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .flash-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(180px, 240px) auto;
+      }
+
+      .newsletter-form {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .cro-item {
+        padding-inline: 18px;
+        border-bottom: 0;
+        border-right: 1px solid var(--line);
+      }
+
+      .cro-item:last-child {
+        border-right: 0;
+      }
+
+      .hero-panel {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .hero-stat {
+        border-bottom: 0;
+      }
+
+      .goal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .proof-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 980px) {
+      .links {
+        display: flex;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .hero .shell {
+        padding-block: 62px 74px;
+      }
+
+      .hero-heading {
+        max-width: 980px;
+      }
+
+      .hero-banner-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        align-items: stretch;
+      }
+
+      .category-row {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .category-pill {
+        min-height: 250px;
+        grid-template-columns: 1fr;
+        align-content: space-between;
+      }
+
+      .category-pill img {
+        height: 118px;
+        justify-self: center;
+        order: -1;
+      }
+
+      .category-copy b {
+        font-size: 24px;
+      }
+
+      .hero-offer {
+        grid-column: 1;
+        width: min(100%, 760px);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 16px;
+        padding: 14px;
+      }
+
+      .hero-offer .offer-price,
+      .hero-offer .offer-list {
+        margin: 0;
+      }
+
+      .hero-offer .offer-list {
+        gap: 4px;
+      }
+
+      .hero-offer .trust-row {
+        display: none;
+      }
+
+      .hero-offer .button {
+        width: auto;
+        white-space: nowrap;
+      }
+
+      .goal-grid {
+        grid-template-columns: 1.08fr .92fr .92fr;
+      }
+
+      .goal-card:first-child {
+        min-height: 530px;
+        grid-row: span 2;
+      }
+
+      .product-stage {
+        grid-template-columns: minmax(0, 1.24fr) minmax(360px, .76fr);
+      }
+
+      .rail {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .quiz-layout,
+      .video-layout,
+      .newsletter-layout {
+        grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+      }
+
+      .quiz-actions {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .proof-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .kit-layout {
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      }
+
+      footer .shell {
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+      }
+
+      .sticky-buy {
+        display: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        background:
+          radial-gradient(circle at 80% 0%, rgba(246, 195, 28, .16), transparent 34%),
+          linear-gradient(135deg, #050505 0%, #100e0a 52%, #050505 100%);
+      }
+
+      .hero::after {
+        height: 5%;
+      }
+
+      .hero .shell {
+        padding-block: 36px 44px;
+      }
+
+      .hero-heading {
+        gap: 12px;
+      }
+
+      h1 {
+        font-size: clamp(34px, 10vw, 42px);
+      }
+
+      .hero-copy {
+        max-width: 340px;
+        font-size: 16px;
+      }
+
+      .hero-banner-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .hero-banner-card {
+        min-height: 292px;
+      }
+
+      .hero-banner-card img {
+        min-height: 292px;
+      }
+
+      .hero-tiger img {
+        object-position: 50% top;
+      }
+
+      .hero-banner-card::before {
+        background: linear-gradient(0deg, rgba(8, 8, 6, .88), rgba(8, 8, 6, .18) 62%, rgba(8, 8, 6, .02));
+      }
+
+      .hero-banner-copy {
+        width: calc(100% - 32px);
+      }
+
+      .hero-banner-copy b {
+        font-size: clamp(25px, 8vw, 34px);
+      }
+
+      .hero-banner-copy em {
+        min-height: 40px;
+      }
+
+      .hero-title-rail span {
+        min-height: 34px;
+        font-size: 11px;
+      }
+
+      .logo {
+        width: 128px;
+      }
+
+      .nav .shell {
+        grid-template-columns: auto 1fr auto;
+      }
+
+      .search {
+        display: none;
+      }
+
+      .rail {
+        grid-template-columns: 1fr;
+      }
+
+      .flash-layout .button,
+      .newsletter-form .button {
+        width: 100%;
+      }
+
+      .category-row {
+        grid-template-columns: 1fr;
+      }
+
+      .category-pill {
+        min-height: 166px;
+        grid-template-columns: minmax(0, 1fr) 104px;
+        padding: 16px;
+      }
+
+      .category-pill img {
+        height: 116px;
+      }
+
+      .category-copy b {
+        font-size: 25px;
+      }
+
+      .category-copy span {
+        font-size: 13px;
+      }
+
+      .review-marquee {
+        margin-inline: calc(var(--gutter) * -1);
+        padding-left: var(--gutter);
+      }
+
+      .review-track {
+        gap: 12px;
+        animation-duration: 28s;
+      }
+
+      .review-card {
+        width: min(86vw, 340px);
+        grid-template-columns: 108px 1fr;
+        min-height: 172px;
+      }
+
+      .review-card div {
+        padding: 14px;
+      }
+
+      .review-card p {
+        font-size: 14px;
+      }
+
+      .sticky-buy {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-buy .button {
+        width: 100%;
+      }
+
+      .sticky-trust {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .sticky-trust i {
+        justify-content: center;
+      }
+
+      body {
+        padding-bottom: 154px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="utility">
+      <div class="shell">
+        <span>Free India shipping above Rs. 999</span>
+        <span>Authentic import seal</span>
+        <span>COD available</span>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="shell">
+        <a href="#" aria-label="One Science Nutrition home">
+          <img class="logo" src="onescience-assets/osn_logo_1_1.webp" alt="One Science Nutrition">
+        </a>
+        <div class="links" aria-label="Shop sections">
+          <a href="#goals">Goals</a>
+          <a href="#featured">Stacks</a>
+          <a href="#proof">Proof</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+        <div class="nav-actions">
+          <button class="icon-btn menu" type="button" aria-label="Open menu">=</button>
+          <button class="icon-btn search" type="button" aria-label="Search">/</button>
+          <button class="icon-btn" type="button" aria-label="Cart">0</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="strip" aria-hidden="true">
+      <div class="strip-track">
+        <span>Tiger combo</span><span>Verified supplements</span><span>Free shipping</span><span>15% off code TIGER15</span><span>COD available</span><span>Fast dispatch</span>
+        <span>Tiger combo</span><span>Verified supplements</span><span>Free shipping</span><span>15% off code TIGER15</span><span>COD available</span><span>Fast dispatch</span>
+      </div>
+    </div>
+
+    <section class="hero banner-head" aria-label="One Science Nutrition performance supplements">
+      <div class="shell">
+        <div class="hero-heading">
+          <p class="kicker">Backed by science. Trusted by Tiger.</p>
+          <h1>Tiger Shroff's performance stack.</h1>
+          <p class="hero-copy">Three fast ways into the One Science stack: athlete trust, daily protein, and the full combo deal.</p>
+        </div>
+        <div class="hero-banner-grid" aria-label="Hero banner choices">
+          <a class="hero-banner-card hero-tiger" href="#featured">
+            <img src="onescience-assets/tiger-clean-hero-desktop.gif" alt="Tiger Shroff One Science performance banner">
+            <span class="hero-banner-copy"><small>Trusted by Tiger</small><b>Train with the headline stack</b><em>Claim Tiger stack</em></span>
+          </a>
+          <a class="hero-banner-card" href="#featured">
+            <img src="onescience-assets/banner-1.jpg" alt="One Science whey performance banner">
+            <span class="hero-banner-copy"><small>Daily muscle</small><b>Start with premium whey</b><em>Shop whey stack</em></span>
+          </a>
+          <a class="hero-banner-card" href="#featured">
+            <img src="onescience-assets/Banner-3.jpg" alt="One Science bundle deal banner">
+            <span class="hero-banner-copy"><small>Limited combo</small><b>Bundle and save today</b><em>Claim combo deal</em></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-label="Performance stats">
+      <div class="shell">
+        <div class="hero-panel stats-panel" aria-label="Store highlights">
+          <div class="hero-stat"><b>25g</b><span>Protein per serving</span></div>
+          <div class="hero-stat"><b>5.2g</b><span>L-glutamine support</span></div>
+          <div class="hero-stat"><b>6.6g</b><span>BCAA recovery</span></div>
+          <div class="hero-stat"><b>200</b><span>Mesh creatine</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-section" aria-label="Shop by category">
+      <div class="shell">
+        <div class="section-head compact-head">
+          <p class="kicker">Shop by category</p>
+          <h2>Find the right shelf in one glance.</h2>
+        </div>
+        <div class="category-row">
+          <a class="category-pill" href="#featured">
+            <span class="category-copy"><small>Daily muscle</small><b>Protein</b><span>Whey stacks for clean recovery.</span><em class="category-action">Shop protein</em></span>
+            <img src="onescience-assets/Front_38996d63-5b27-4ede-af1d-79e78bb545cd.png" alt="Whey protein category">
+          </a>
+          <a class="category-pill" href="#featured">
+            <span class="category-copy"><small>Strength output</small><b>Creatine</b><span>Micronized power for repeat sets.</span><em class="category-action">Shop creatine</em></span>
+            <img src="onescience-assets/MicronizedCreatine_250G_Top.png" alt="Creatine category">
+          </a>
+          <a class="category-pill" href="#featured">
+            <span class="category-copy"><small>Training intensity</small><b>Pre-workout</b><span>Focus and pump before hard sessions.</span><em class="category-action">Shop pre</em></span>
+            <img src="onescience-assets/Sniper_Pineapple_front_c818892f-4b21-4e01-a4a4-2bda792fecc5.png" alt="Pre workout category">
+          </a>
+          <a class="category-pill" href="#featured">
+            <span class="category-copy"><small>Daily essentials</small><b>Wellness</b><span>Support for disciplined routines.</span><em class="category-action">Shop wellness</em></span>
+            <img src="onescience-assets/Omega_3.jpg" alt="Wellness category">
+          </a>
+          <a class="category-pill" href="#featured">
+            <span class="category-copy"><small>Blood flow</small><b>Pump</b><span>Stack support for volume days.</span><em class="category-action">Shop pump</em></span>
+            <img src="onescience-assets/nitra_1.png" alt="Pump category">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flash-sale" aria-label="Flash sale">
+      <div class="shell">
+        <div class="flash-layout">
+          <div>
+            <p class="kicker">Flash sale live</p>
+            <h2>Tiger stack drops the cart friction.</h2>
+            <p>Bundle pricing, COD reassurance, visible savings, and a direct path to the hero combo.</p>
+          </div>
+          <div class="flash-deal" aria-label="Sale details">
+            <span>Use code</span>
+            <strong>TIGER15</strong>
+            <small>Free shipping above Rs. 999</small>
+          </div>
+          <a class="button gold" href="#featured">Shop sale</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="featured">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Featured stack</p>
+          <h2>One decision. Full training month.</h2>
+          <p>The page now sells like a premium D2C funnel: clear bundle math, visible inclusions, one primary CTA, and trust cues beside the price.</p>
+        </div>
+        <div class="product-stage">
+          <article class="spotlight" aria-label="Premium whey protein bundle">
+            <span class="spotlight-badge">Best value stack</span>
+            <img src="onescience-assets/1_0eacc77f-f0ce-41ca-a0d6-7b77c2b38ecc.jpg" alt="One Science Premium Whey Protein with creatine, pump, and shaker">
+          </article>
+          <aside class="product-info">
+            <div class="info-card buy-box">
+              <h3>Tiger performance combo</h3>
+              <p>Premium Whey Protein 5 lb plus creatine, pre-workout and shaker in one clean high-intent bundle.</p>
+              <div class="price">Rs. 6,999</div>
+              <div class="bundle-row" aria-label="Bundle offer options">
+                <div class="bundle-option"><span>Single stack<small>Best for first trial</small></span><strong>Save 18%</strong></div>
+                <div class="bundle-option"><span>2 month stack<small>Most popular repeat order</small></span><strong>Save 24%</strong></div>
+              </div>
+              <div class="stack" aria-label="Nutrition highlights">
+                <div class="metric"><b>25g</b>Protein</div>
+                <div class="metric"><b>70</b>Servings</div>
+                <div class="metric"><b>3g</b>Creatine</div>
+                <div class="metric"><b>15</b>Pump shots</div>
+              </div>
+            </div>
+            <div class="info-card">
+              <h3>Why this stack works</h3>
+              <p>25g protein per serving, micronized creatine support, pre-workout intensity, and the shaker in one ready-to-train combo.</p>
+              <div class="proof-list" aria-label="Purchase reassurance">
+                <span>5.0 star customer reviews</span>
+                <span>Authenticity checked before dispatch</span>
+                <span>COD and fast India shipping</span>
+              </div>
+              <a class="button gold" href="#reviews">Read customer reviews</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews" aria-label="Customer proof">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Customer proof</p>
+          <h2>Lifters keep coming back.</h2>
+          <p>Real buyers, real routines, and stack feedback placed right where purchase intent is highest.</p>
+        </div>
+        <div class="review-marquee" aria-label="Auto scrolling customer reviews">
+          <div class="review-track">
+            <article class="review-card">
+              <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="Customer holding One Science product">
+              <div><span class="stars">5.0 stars</span><p>"Clean mix, solid recovery, and the flavour is easy to repeat daily."</p></div>
+            </article>
+            <article class="review-card">
+              <img src="onescience-assets/1774877454__1774877435141-img_9555__original.jpeg" alt="Customer with One Science nutrition">
+              <div><span class="stars">5.0 stars</span><p>"The combo makes sense. Whey, creatine, pump and shaker in one go."</p></div>
+            </article>
+            <article class="review-card">
+              <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="Customer reviewing One Science product">
+              <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="">
+              <div><span class="stars">5.0 stars</span><p>"Clean mix, solid recovery, and the flavour is easy to repeat daily."</p></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img src="onescience-assets/1774877454__1774877435141-img_9555__original.jpeg" alt="">
+              <div><span class="stars">5.0 stars</span><p>"The combo makes sense. Whey, creatine, pump and shaker in one go."</p></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="">
+              <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Popular products">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Performance shelf</p>
+          <h2>Four essentials, no confusion.</h2>
+        </div>
+        <div class="rail">
+          <article class="mini-product">
+            <figure><img src="onescience-assets/Front_38996d63-5b27-4ede-af1d-79e78bb545cd.png" alt="One Science whey product"></figure>
+            <div><h3>100% Whey</h3><p>Daily protein foundation for muscle repair.</p></div>
+          </article>
+          <article class="mini-product">
+            <figure><img src="onescience-assets/MicronizedCreatine_250G_Top.png" alt="One Science micronized creatine"></figure>
+            <div><h3>Creatine</h3><p>Strength output and repeat set support.</p></div>
+          </article>
+          <article class="mini-product">
+            <figure><img src="onescience-assets/Sniper_Pineapple_front_c818892f-4b21-4e01-a4a4-2bda792fecc5.png" alt="One Science Sniper pre workout"></figure>
+            <div><h3>Sniper</h3><p>High-intensity pre-workout focus.</p></div>
+          </article>
+          <article class="mini-product">
+            <figure><img src="onescience-assets/Omega_3.jpg" alt="One Science Omega 3"></figure>
+            <div><h3>Omega 3</h3><p>Daily wellness for disciplined routines.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="flavour" aria-label="One Whey fourteen flavours">
+      <picture>
+        <source media="(min-width: 720px)" srcset="onescience-assets/One-Whey.-Fourteen-Flavours-section-desktop.jpg">
+        <img src="onescience-assets/One-Whey.-Fourteen-Flavors-section.jpg" alt="One Whey fourteen flavours banner">
+      </picture>
+    </section>
+
+    <section class="goal-quiz" aria-label="Personalized performance stack">
+      <div class="shell quiz-layout">
+        <div>
+          <p class="kicker">Reach your potential</p>
+          <h2>Build the stack around your training week.</h2>
+          <p>Protein first, creatine for strength, pre-workout for intensity, and daily wellness for consistency.</p>
+        </div>
+        <div class="quiz-actions" aria-label="Stack builder shortcuts">
+          <a class="quiz-chip" href="#goals">Lean muscle</a>
+          <a class="quiz-chip" href="#goals">Strength</a>
+          <a class="quiz-chip" href="#goals">Recovery</a>
+          <a class="quiz-chip" href="#featured">Starter combo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Shop by goal</p>
+          <h2>Desi gym logic, premium shelf presence.</h2>
+          <p>Fast decisions for lifters: bulk clean, recover hard, stay sharp, or build the everyday stack.</p>
+        </div>
+        <div class="goal-grid">
+          <a class="goal-card" href="#featured">
+            <img src="onescience-assets/Shop-By-goal-section2.jpg" alt="Athlete training with supplements">
+            <div class="goal-card-content">
+              <h3>Lean muscle</h3>
+              <p>Whey-forward stacks for daily protein, training recovery, and cleaner macro discipline.</p>
+            </div>
+          </a>
+          <a class="goal-card" href="#featured">
+            <img src="onescience-assets/Shop-By-goal-section3.jpg" alt="Training goal product visual">
+            <div class="goal-card-content">
+              <h3>Strength</h3>
+              <p>Creatine and pre-workout combos tuned for progressive overload weeks.</p>
+            </div>
+          </a>
+          <a class="goal-card" href="#featured">
+            <img src="onescience-assets/One-Whey.-Fourteen-Flavors-section.jpg" alt="One Whey flavour collection">
+            <div class="goal-card-content">
+              <h3>Flavour flex</h3>
+              <p>Chocolate, muffin, fudge and daily-driver flavours built for repeat scoops.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-proof" aria-label="Training video banner">
+      <div class="shell video-layout">
+        <div class="video-copy">
+          <p class="kicker">Watch the stack move</p>
+          <h2>Performance energy before product detail.</h2>
+          <p>A cinematic training banner gives the page the reference mockup's video moment without introducing new off-brand assets.</p>
+        </div>
+        <div class="video-frame">
+          <img src="onescience-assets/banner-desktop-jadhav-onescience.jpg" alt="One Science athlete performance banner">
+          <span class="play-mark" aria-hidden="true">Play</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cro-band" aria-label="Purchase benefits">
+      <div class="shell">
+        <div class="cro-item"><div class="cro-icon">1</div><div><b>Pick by goal</b><span>Muscle, strength, recovery, fat loss.</span></div></div>
+        <div class="cro-item"><div class="cro-icon">2</div><div><b>Bundle and save</b><span>Higher AOV stacks made obvious.</span></div></div>
+        <div class="cro-item"><div class="cro-icon">3</div><div><b>Checkout with trust</b><span>COD, dispatch, and authenticity cues.</span></div></div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Trust layer</p>
+          <h2>Premium is measured, not shouted.</h2>
+        </div>
+        <div class="proof-grid">
+          <div class="proof-card"><b>Tiger</b><p>Ambassador-led trust is now the first-screen conversion signal.</p></div>
+          <div class="proof-card"><b>15%</b><p>Visible code and savings framing create a sharper purchase reason.</p></div>
+          <div class="proof-card"><b>COD</b><p>India-specific buying reassurance appears before the product grid.</p></div>
+          <div class="proof-card"><b>2x</b><p>Bundle options push higher value without adding checkout friction.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-section" aria-label="Trusted and certified">
+      <div class="shell">
+        <div class="section-head compact-head">
+          <p class="kicker">Trusted and certified</p>
+          <h2>Conversion proof where shoppers expect it.</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-item"><b>Authentic</b><span>Original assets and product identity retained.</span></div>
+          <div class="cert-item"><b>COD</b><span>India-first payment reassurance.</span></div>
+          <div class="cert-item"><b>Fast ship</b><span>Dispatch promise shown before checkout.</span></div>
+          <div class="cert-item"><b>Stack value</b><span>Savings framed around real routines.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" aria-label="Join One Science squad">
+      <div class="shell newsletter-layout">
+        <div>
+          <p class="kicker">Squad updates</p>
+          <h2>Get drops, codes, and stack reminders.</h2>
+        </div>
+        <form class="newsletter-form">
+          <label class="visually-hidden" for="email">Email address</label>
+          <input id="email" type="email" placeholder="Enter email" autocomplete="email">
+          <button class="button gold" type="submit">Join</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="kit">
+      <div class="shell kit-layout">
+        <div class="kit-copy">
+          <p class="kicker">Final push</p>
+          <h2>The serious lifter's buying path.</h2>
+          <p>Cleaner than a catalogue, sharper than a landing page: the redesign now leads with Tiger trust, sells the stack, handles objections, and keeps the black-gold One Science identity intact.</p>
+          <a class="button gold" href="#featured">Start with the stack</a>
+        </div>
+        <div class="kit-image">
+          <img src="onescience-assets/nitra_1.png" alt="One Science Nitra product pack">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-buy" role="region" aria-label="Sticky purchase bar">
+    <div class="sticky-meta">
+      <em class="sticky-notice">12 orders placed today</em>
+      <div><b>Tiger Combo - Rs. 6,999</b><span>Use TIGER15 at checkout</span></div>
+      <div class="sticky-trust" aria-label="Purchase trust badges"><i>COD</i><i>Authentic</i><i>Fast ship</i></div>
+    </div>
+    <a class="button gold" href="#featured">Buy</a>
+  </div>
+
+  <footer>
+    <div class="shell">
+      <img src="onescience-assets/osn_logo_1_1.webp" alt="One Science Nutrition">
+      <p>Redesign concept using the original captured site assets and original font direction.</p>
+      <a class="button ghost" href="#">Back to top</a>
+    </div>
+  </footer>
+  <script>
+    const stickyBuy = document.querySelector('.sticky-buy');
+    const toggleStickyBuy = () => {
+      stickyBuy?.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.72);
+    };
+    toggleStickyBuy();
+    window.addEventListener('scroll', toggleStickyBuy, { passive: true });
+  </script>
+</body>
+</html>

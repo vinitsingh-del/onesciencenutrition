@@ -1,0 +1,171 @@
+/** Shopify CDN: Minification failed
+
+Line 112:18 Unexpected "{"
+Line 112:27 Expected ":"
+Line 112:34 Unexpected "{"
+Line 117:18 Unexpected "{"
+Line 117:27 Expected ":"
+Line 131:18 Unexpected "{"
+Line 131:27 Expected ":"
+Line 136:18 Unexpected "{"
+Line 136:27 Expected ":"
+Line 142:18 Unexpected "{"
+... and 5 more hidden warnings
+
+**/
+/* Place any CSS overrides in this file. */
+.os-image-box .image-with-text-overlay__grid .responsive-image-wrapper .theme-img{width:50%;margin-left:auto;}
+.os-collection-slider .swiper-button-prev,.os-collection-slider .swiper-button-next{width: 44px;height: 44px;padding: 12px;background-color: #242424;color: #fff;transition: transform .2s ease-out;opacity:0;}
+.os-collection-slider .swiper-button-prev::after,.os-collection-slider .swiper-button-next::after{font-size: 12px;font-weight: 600;}
+.os-collection-slider:hover .swiper-button-prev{left:0;transform: translateX(100%);opacity:1;}
+.os-collection-slider:hover .swiper-button-next{right:0;transform: translateX(-100%);opacity:1;}
+.os-collection-slider .swiper-button-next.swiper-button-disabled,.os-collection-slider .swiper-button-prev.swiper-button-disabled{transition: transform .2s ease-out;}
+.os-collection-slider:hover .swiper-button-next.swiper-button-disabled,.os-collection-slider:hover .swiper-button-prev.swiper-button-disabled{opacity: .35;}
+.os-collection-slider{padding-bottom:0px;}
+.os-collection-slider .swiper-scrollbar{display:none;}
+.product-single .product-details-wrapper .swatch-items-wrapper .swatch-element label::after{display:none;}
+.section-contact-form .section-contact-form--form .input-wrapper select.form-control{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDcuNEwwIDEuNEwxLjQgMEw2IDQuNkwxMC42IDBMMTIgMS40TDYgNy40WiIgZmlsbD0iIzFDMUIxRiIvPgo8L3N2Zz4K");background-repeat: no-repeat;background-position: right 10px center;}
+.os-collection-slider .grid-item__content a .grid-item__title{font-size:16px;font-weight:500;font-family: var(--body-font-stack);margin-bottom:5px;}
+
+#free-t-shirt-with-psycho-pump .product-details-wrapper [data-update-id="item-quantity"],#free-t-shirt-plastic-shaker-with-premium-whey-5lbs .product-details-wrapper [data-update-id="item-quantity"],#free-sando-plastic-shaker-with-nitra-whey-5lbs .product-details-wrapper [data-update-id="item-quantity"],#free-steel-shaker-with-iso-gold-5lbs .product-details-wrapper [data-update-id="item-quantity"] {display:none;}
+.rapi-gift-product-inline .gift-content-wraper .rapi-gift-image{height:120px !important;width: 120px !important;object-fit: contain;background-color:#fff;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container{overflow:hidden;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container .rapi-bundles__bar-main-outer + div{display:flex;position:relative;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container .rapi-bundles__bar-main-outer + div::before{content:'+';position:absolute;top:50%;left:50%;transform:translate(-50% , -50%);font-size:30px;font-weight:400;color:#fff;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container .rapi-bundles__bar-main-outer + div .rapi-gift-product-inline{width:100%;border-radius: 0;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container .rapi-bundles__bar-main-outer + div .rapi-gift-product-inline + .rapi-gift-product-inline .gift-content-wraper{border-top:none;border-left:none;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container .rapi-bundles__bar-main-outer .rapi-bundles__bar-main{display:flex;align-items:center;padding: 12px 10px;}
+.rapi-bundles .rapi-bundles__bar .rapi-bundles__bar-container .rapi-bundles__bar-main-outer .rapi-bundles__bar-main .rapi-offer-radio{margin-bottom:0;position: absolute;top: 12px;right: 12px;}
+.rapi-bundles.rapi-prestige-bundles .rapi-bundles__bars{flex-direction: row;gap: 14px;}
+#free-t-shirt-with-psycho-pump .rapi-bundles .rapi-bundles__bar-content{position: absolute;right: 10px;}
+/* Defult page CSS */
+.rte.grid__item--page h1, .rte.grid__item--page h2, .rte.grid__item--page h3, .rte.grid__item--page h4, .rte.grid__item--page h5, .rte.grid__item--page h6 {margin-top: 20px !important;}
+.rte.grid__item--page h1, .rte.grid__item--page h2, .rte.grid__item--page h3, .rte.grid__item--page h4, .rte.grid__item--page h5, .rte.grid__item--page h6, .rte.grid__item--page p, .rte.grid__item--page ol, .rte.grid__item--page ul{margin-bottom: 15px !important;}
+.rte.grid__item--page ol, .rte.grid__item--page ul {    padding-left: 20px !important;}
+/* Defult page CSS End */
+
+header.site-header .dropdown-submenu .h4.mega-menu-link--title{pointer-events: none;}
+/*
+.rapi-bundles__bars .rapi-bundles__bar-content .rapi-bundles__bar-pricing{display:none;}
+
+#one-science-nutrition-osn-psycho-pump-extreme-pre-workout-formula .rapi-bundles.rapi-original-bundles{display:none;}
+#one-science-nutrition-osn-psycho-pump-extreme-pre-workout-formula .product-details-wrapper  [data-update-id="item-quantity"]{margin-bottom:0 !important;}
+*/
+
+.site-header .site-header__wrapper .site-header__wrapper__left .site-nav li:first-child .site-nav__link:hover{cursor: default;}
+/* .site-header .site-header__wrapper .site-header__wrapper__left .site-nav li:first-child .site-nav__link .site-nav--link-wrapper .site-nav--link-text{background-image:none;}
+.site-header .site-header__wrapper .site-header__wrapper__left .site-nav li:first-child .site-nav__link:hover .site-nav--link-wrapper .site-nav--link-text{background-image:none;} */
+
+#one-science-nutrition-osn-psycho-pump-extreme-pre-workout-formula .rapi-bundles .rapi-bundles__bar-main{display:none;}
+.paymentButtonsWrapper > div{width:100%;}
+.paymentButtonsWrapper  span{color:#fff;}
+.paymentButtonsWrapper select{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDcuNEwwIDEuNEwxLjQgMEw2IDQuNkwxMC42IDBMMTIgMS40TDYgNy40WiIgZmlsbD0iIzFDMUIxRiIvPgo8L3N2Zz4K");background-repeat:no-repeat;background-position:right 12px center;padding:10px !important;height: 36px;}
+.paymentButtonsWrapper .pb-0ada{display:none}
+
+.osn-banner-link{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}
+
+.cart-drawer__taxes-shipping.text-link-animated{display:none;}
+.cart-drawer__footer--buttons .cart-drawer__footer--button{display:none;}
+.osn-inclusive-text{font-size:13px;}
+
+.product-media-slider-main  .swiper-slide.animated{animation-duration: 0s;}
+
+
+@media (max-width:991px){
+    .os-image-box .image-with-text-overlay__grid .responsive-image-wrapper .theme-img {width: 100%;}
+    .os-image-box .image-with-text-overlay__grid--background,.os-image-box .image-with-text-overlay__grid--foreground{grid-row: unset;}
+    .os-image-box .image-with-text-overlay__mobile-image--cropped{min-height: 360px;}
+    .os-image-box .image-with-text-overlay__mobile-image--cropped .image-with-text-overlay__cropped-image .parallax-child{height: 100%;}
+    .os-image-box .image-with-text-overlay__grid--foreground{padding:30px 0;}
+}
+
+@media (max-width:767px){
+    /* Hide main product ATC/Buy Now on mobile only when sticky bar is visible (section enabled) */
+    body.product-sticky-bar-visible.template-product [data-wetheme-section-type="template--product"] .product-details-wrapper .paymentButtonsWrapper {
+        display: none !important;
+    }
+
+    .os-collection-slider .swiper-slide{width:calc(100%/1.5) !important;}
+    .os-collection-slider{margin:0px;}
+    .os-collection-slider{padding-bottom:24px;}
+    .os-collection-slider .swiper-scrollbar{bottom:0;display:block;}
+    .os-collection-slider .swiper-scrollbar-drag{background-color:#000;}
+    #slide-up .popup--body{padding:30px 20px 20px !important;}
+    .popup--body .popup--description{margin-bottom:0 !important;}
+    .contact-form p{margin-bottom:0 !important;}
+    .popup--body form.contact-form .btn {margin: 0px 0 !important;font-size: 12px;line-height: 18px !important;}
+    .popup--body-outer .popup--body .custom-font{font-size:16px !important;}
+    .popup--body-outer .popup--body .popup--description p{font-size:14px !important;}
+    .popup--body-outer .popup--body .contact-form .input-group .input-group-field {font-size: 14px;line-height: 16px;}
+    .popup--body-outer .popup--body .contact-form .input-group{display:flex;align-items:center;margin-bottom:15px !important;}   
+     #slide-up .popup--close-btn{top: 6px !important;right: 4px !important;}
+
+     .paymentButtonsWrapper .pb-4e82{top:auto !important;}
+}
+
+
+/* ================================
+   FLOW THEME – SLIDESHOW ARROWS
+   Left & Right Center Position
+================================ */
+
+.slider-section--{{ section.id }} {
+  position: relative;
+}
+
+/* Arrow wrapper */
+.slider-section--{{ section.id }} .image--slideshow__navigation.arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 40;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Enable clicking on arrows */
+.slider-section--{{ section.id }} .image--slideshow__navigation.arrows a {
+  pointer-events: auto;
+}
+
+/* Left arrow */
+.slider-section--{{ section.id }} .image--slideshow__navigation.arrows .flex-prev {
+  position: absolute;
+  left: 30px;
+}
+
+/* Right arrow */
+.slider-section--{{ section.id }} .image--slideshow__navigation.arrows .flex-next {
+  position: absolute;
+  right: 30px;
+}
+
+/* Hide pagination for arrow layout */
+.slider-section--{{ section.id }} .image--slideshow__navigation.arrows .swiper-pagination {
+  display: none;
+}
+
+
+.slider-section--{{ section.id }} 
+.swiper-pagination.swiper-pagination-fraction {
+  display: none !important;
+}
+
+/* custom trust badges */
+
+.custom-trust-badge img{
+    width: var(--desktop-width);
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+@media(max-width:767px){
+    .custom-trust-badge img{
+        width:var(--mobile-width);
+    }
+}
