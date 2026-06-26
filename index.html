@@ -197,18 +197,42 @@
       overflow: hidden;
     }
 
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: .52;
+      filter: saturate(1.06) contrast(1.04);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(5, 5, 5, .9), rgba(5, 5, 5, .62) 44%, rgba(5, 5, 5, .28) 100%),
+        linear-gradient(180deg, rgba(5, 5, 5, .74), rgba(5, 5, 5, .3) 48%, rgba(5, 5, 5, .82));
+      pointer-events: none;
+    }
+
     .hero::after {
       content: "";
       position: absolute;
       inset: auto 0 0;
       height: 18%;
+      z-index: 2;
       background: linear-gradient(0deg, var(--paper), rgba(255, 250, 240, 0));
       pointer-events: none;
     }
 
     .hero .shell {
       position: relative;
-      z-index: 1;
+      z-index: 3;
       padding-block: clamp(22px, 3.4vw, 42px) clamp(30px, 4vw, 58px);
       display: grid;
       gap: clamp(16px, 2vw, 24px);
@@ -2174,6 +2198,17 @@
           linear-gradient(135deg, #050505 0%, #100e0a 52%, #050505 100%);
       }
 
+      .hero-video {
+        object-position: center top;
+        opacity: .42;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(5, 5, 5, .86), rgba(5, 5, 5, .54) 46%, rgba(5, 5, 5, .9)),
+          linear-gradient(90deg, rgba(5, 5, 5, .78), rgba(5, 5, 5, .28));
+      }
+
       .hero::after {
         height: 5%;
       }
@@ -2364,6 +2399,7 @@
       .goal-card,
       .goal-card img,
       .goal-card-content,
+      .hero-video,
       .team-product-shine::before {
         transform: none !important;
       }
@@ -2403,6 +2439,9 @@
     </div>
 
     <section class="hero banner-head" aria-label="One Science Nutrition performance supplements">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="onescience-assets/tiger-clean-hero-desktop.png" aria-hidden="true">
+        <source src="onescience-assets/tiger-science-hero-bg.mp4" type="video/mp4">
+      </video>
       <div class="shell">
         <div class="hero-heading">
           <p class="kicker">Backed by science. Trusted by Tiger.</p>
