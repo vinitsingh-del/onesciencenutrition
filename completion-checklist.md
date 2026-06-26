@@ -252,3 +252,17 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Team Behind Stack Proof
+
+- [x] Added Team Behind card above Why this stack works.
+- [x] Used the supplied team image as a local original asset.
+- [x] Added product-only shine overlay scoped to the held Premium Whey tub.
+- [x] Preserved reduced-motion behavior for the shine animation.
+- [x] Built static output screenshots.
+  - `outputs/team-behind-desktop.png`
+  - `outputs/team-behind-mobile.png`
+- [x] Tested twice after Team Behind section update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.

@@ -1426,6 +1426,86 @@
       margin: 12px 0 0;
     }
 
+    .team-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .team-visual {
+      position: relative;
+      min-height: 280px;
+      overflow: hidden;
+      background: #080806;
+    }
+
+    .team-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(1.06) contrast(1.05);
+    }
+
+    .team-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8, 8, 6, .08), rgba(8, 8, 6, .72)),
+        radial-gradient(circle at 49% 82%, rgba(255, 226, 112, .18), transparent 22%);
+      pointer-events: none;
+    }
+
+    .team-product-shine {
+      position: absolute;
+      left: 36%;
+      top: 73%;
+      width: 24%;
+      height: 25%;
+      border-radius: 46% 46% 18% 18%;
+      overflow: hidden;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: .9;
+    }
+
+    .team-product-shine::before {
+      content: "";
+      position: absolute;
+      inset: -45% -120%;
+      background:
+        linear-gradient(105deg, transparent 0 36%, rgba(255, 248, 184, .05) 42%, rgba(255, 248, 184, .92) 50%, rgba(255, 197, 32, .22) 58%, transparent 66% 100%);
+      transform: translateX(-55%) rotate(3deg);
+      animation: productOnlyShine 3.8s ease-in-out infinite;
+    }
+
+    .team-copy {
+      padding: 20px 22px 22px;
+    }
+
+    .team-copy h3 {
+      font-size: clamp(22px, 2.4vw, 32px);
+    }
+
+    .team-copy p {
+      margin-top: 10px;
+    }
+
+    @keyframes productOnlyShine {
+      0%, 28% {
+        transform: translateX(-68%) rotate(3deg);
+        opacity: 0;
+      }
+      44% {
+        opacity: .95;
+      }
+      70%, 100% {
+        transform: translateX(72%) rotate(3deg);
+        opacity: 0;
+      }
+    }
+
     .proof-list {
       display: grid;
       gap: 8px;
@@ -2222,7 +2302,8 @@
       #goals,
       .goal-card,
       .goal-card img,
-      .goal-card-content {
+      .goal-card-content,
+      .team-product-shine::before {
         transform: none !important;
       }
     }
@@ -2408,6 +2489,17 @@
                 <div class="metric"><b>70</b>Servings</div>
                 <div class="metric"><b>3g</b>Creatine</div>
                 <div class="metric"><b>15</b>Pump shots</div>
+              </div>
+            </div>
+            <div class="info-card team-card">
+              <div class="team-visual">
+                <img src="onescience-assets/team-behind-one-science.png" alt="One Science Nutrition team with Tiger Shroff holding Premium Whey Protein">
+                <span class="team-product-shine" aria-hidden="true"></span>
+              </div>
+              <div class="team-copy">
+                <p class="kicker">Team behind</p>
+                <h3>Built with the people behind the stack.</h3>
+                <p>Founder trust, Tiger visibility, and the product in-hand placed directly before the buying proof.</p>
               </div>
             </div>
             <div class="info-card">
