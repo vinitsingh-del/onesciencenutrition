@@ -193,3 +193,16 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Hero Spacing And Banner Tightening
+
+- [x] Removed the empty black space between the ticker/nav area and the hero title.
+- [x] Moved the hero title upward so the banner section starts cleanly in the first viewport.
+- [x] Kept the three hero banner cards neat on desktop and mobile.
+- [x] Built static output screenshots.
+  - `outputs/hero-tight-desktop.png`
+  - `outputs/hero-tight-mobile.png`
+- [x] Tested twice after hero spacing update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.
