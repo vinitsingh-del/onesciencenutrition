@@ -1783,10 +1783,12 @@
 
     .reviews {
       background:
-        radial-gradient(circle at 18% 18%, rgba(246, 195, 28, .13), transparent 28%),
+        radial-gradient(circle at 22% 18%, rgba(255, 226, 112, .18), transparent 26%),
+        radial-gradient(circle at 78% 58%, rgba(246, 195, 28, .1), transparent 30%),
         linear-gradient(135deg, #050505, #15120c 58%, #050505);
       color: var(--white);
       overflow: hidden;
+      padding-block: clamp(48px, 7vw, 86px);
     }
 
     .reviews .section-head {
@@ -1800,18 +1802,18 @@
 
     .review-marquee {
       position: relative;
-      overflow: visible;
+      overflow: hidden;
       margin-inline: calc(var(--gutter) * -1);
-      padding: 8px var(--gutter) 12px;
-      mask-image: none;
+      padding: 8px 0 14px;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
     }
 
     .review-track {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: max-content;
+      display: flex;
       gap: 16px;
-      animation: none;
+      padding-inline: var(--gutter);
+      animation: reviewFlow 30s linear infinite;
     }
 
     .review-marquee:hover .review-track {
@@ -1824,19 +1826,40 @@
       }
     }
 
+    @keyframes reviewShine {
+      0%, 38% {
+        transform: translateX(-120%);
+      }
+      68%, 100% {
+        transform: translateX(120%);
+      }
+    }
+
     .review-card {
-      width: 100%;
+      width: min(74vw, 390px);
       border: 1px solid rgba(246, 195, 28, .26);
       border-radius: var(--radius);
       overflow: hidden;
       display: grid;
       grid-template-columns: minmax(118px, 150px) minmax(0, 1fr);
-      min-height: 210px;
+      min-height: 188px;
       background:
+        radial-gradient(circle at 18% 22%, rgba(255, 226, 112, .14), transparent 32%),
         linear-gradient(135deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .05));
       box-shadow: 0 24px 70px rgba(0, 0, 0, .26);
       backdrop-filter: blur(18px) saturate(1.2);
       flex: 0 0 auto;
+      position: relative;
+    }
+
+    .review-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(112deg, transparent 0 34%, rgba(255, 231, 120, .22) 47%, transparent 60% 100%);
+      transform: translateX(-120%);
+      animation: reviewShine 5.8s ease-in-out infinite;
+      pointer-events: none;
     }
 
     .review-card img {
@@ -2267,16 +2290,16 @@
 
       .review-marquee {
         margin-inline: calc(var(--gutter) * -1);
-        padding-inline: var(--gutter);
+        padding-inline: 0;
       }
 
       .review-track {
-        grid-template-columns: 1fr;
         gap: 12px;
+        animation-duration: 24s;
       }
 
       .review-card {
-        width: 100%;
+        width: min(86vw, 340px);
         grid-template-columns: 102px minmax(0, 1fr);
         min-height: 174px;
       }
@@ -2466,6 +2489,44 @@
       </div>
     </section>
 
+    <section id="reviews" class="reviews" aria-label="Customer proof">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Customer proof</p>
+          <h2>Lifters keep coming back.</h2>
+          <p>Real buyers, real routines, and stack feedback placed right after goal-based shopping.</p>
+        </div>
+        <div class="review-marquee" aria-label="Moving customer reviews">
+          <div class="review-track">
+            <article class="review-card">
+              <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="Customer holding One Science product">
+              <div><span class="stars">5.0 stars</span><p>"Clean mix, solid recovery, and the flavour is easy to repeat daily."</p></div>
+            </article>
+            <article class="review-card">
+              <img src="onescience-assets/1774877454__1774877435141-img_9555__original.jpeg" alt="Customer with One Science nutrition">
+              <div><span class="stars">5.0 stars</span><p>"The combo makes sense. Whey, creatine, pump and shaker in one go."</p></div>
+            </article>
+            <article class="review-card">
+              <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="Customer reviewing One Science product">
+              <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="">
+              <div><span class="stars">5.0 stars</span><p>"Clean mix, solid recovery, and the flavour is easy to repeat daily."</p></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img src="onescience-assets/1774877454__1774877435141-img_9555__original.jpeg" alt="">
+              <div><span class="stars">5.0 stars</span><p>"The combo makes sense. Whey, creatine, pump and shaker in one go."</p></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="">
+              <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="flash-sale" aria-label="Flash sale">
       <div class="shell">
         <div class="flash-layout">
@@ -2534,32 +2595,6 @@
               <a class="button gold" href="#reviews">Read customer reviews</a>
             </div>
           </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews" class="reviews" aria-label="Customer proof">
-      <div class="shell">
-        <div class="section-head">
-          <p class="kicker">Customer proof</p>
-          <h2>Lifters keep coming back.</h2>
-          <p>Real buyers, real routines, and stack feedback placed right where purchase intent is highest.</p>
-        </div>
-        <div class="review-marquee" aria-label="Customer reviews">
-          <div class="review-track">
-            <article class="review-card">
-              <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="Customer holding One Science product">
-              <div><span class="stars">5.0 stars</span><p>"Clean mix, solid recovery, and the flavour is easy to repeat daily."</p></div>
-            </article>
-            <article class="review-card">
-              <img src="onescience-assets/1774877454__1774877435141-img_9555__original.jpeg" alt="Customer with One Science nutrition">
-              <div><span class="stars">5.0 stars</span><p>"The combo makes sense. Whey, creatine, pump and shaker in one go."</p></div>
-            </article>
-            <article class="review-card">
-              <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="Customer reviewing One Science product">
-              <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
-            </article>
-          </div>
         </div>
       </div>
     </section>
