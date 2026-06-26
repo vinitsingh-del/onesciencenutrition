@@ -179,3 +179,17 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Dynamic Smoke And Product Animation
+
+- [x] Added dynamic smoke motion to the hero banner cards and featured product area.
+- [x] Added product bottle movement across the hero banners, featured product, product cards, and category cards.
+- [x] Preserved reduced-motion behavior for users who prefer less animation.
+- [x] Built static output screenshots.
+  - `outputs/dynamic-smoke-hero.png`
+  - `outputs/dynamic-product-featured.png`
+  - `outputs/dynamic-smoke-mobile.png`
+- [x] Tested twice after dynamic smoke/product update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.
