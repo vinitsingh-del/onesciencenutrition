@@ -1291,13 +1291,16 @@
     }
 
     .spotlight {
+      width: min(100%, 640px);
+      justify-self: center;
       border-radius: var(--radius);
       background:
         radial-gradient(circle at 28% 16%, rgba(246, 195, 28, .26), transparent 30%),
         linear-gradient(140deg, #16130d, #050505 70%);
-      min-height: 560px;
-      padding: clamp(18px, 4vw, 42px);
+      min-height: 448px;
+      padding: clamp(18px, 3.2vw, 34px);
       display: grid;
+      place-items: center;
       align-items: center;
       position: relative;
       overflow: hidden;
@@ -1327,8 +1330,10 @@
     .spotlight img {
       position: relative;
       z-index: 2;
-      width: min(108%, 880px);
-      margin: auto auto -3%;
+      width: min(82%, 660px);
+      max-height: 390px;
+      margin: 34px auto 0;
+      object-fit: contain;
       filter: drop-shadow(0 34px 34px rgba(0, 0, 0, .5));
       transform-origin: 50% 82%;
       animation: heroProductFloat 6.8s ease-in-out infinite;
@@ -2088,7 +2093,11 @@
       }
 
       .product-stage {
-        grid-template-columns: minmax(0, 1.24fr) minmax(360px, .76fr);
+        grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr);
+      }
+
+      .spotlight {
+        width: 100%;
       }
 
       .rail {
