@@ -47,6 +47,11 @@
       box-sizing: border-box;
     }
 
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -55,10 +60,12 @@
       margin: 0;
       color: var(--ink);
       background: var(--paper);
-      font-family: Figtree, Arial, sans-serif;
+      font-family: Figtree, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.45;
+      line-height: 1.6;
       overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     img {
@@ -84,9 +91,11 @@
       padding: 13px 18px;
       background: var(--ink);
       color: var(--gold-2);
-      font: 800 12px/1 Figtree, sans-serif;
+      font: 800 12px/1.15 Figtree, Inter, sans-serif;
       text-transform: uppercase;
       letter-spacing: 0;
+      text-align: center;
+      white-space: normal;
       cursor: pointer;
       transition: transform .18s ease, background .18s ease, color .18s ease;
     }
@@ -112,39 +121,45 @@
     .utility {
       background: var(--ink);
       color: var(--gold-2);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
     }
 
     .utility .shell {
-      min-height: 38px;
+      min-height: 30px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 18px;
+      justify-content: space-between;
+      gap: 12px;
       text-align: center;
+    }
+
+    .utility span {
+      flex: 1 1 0;
+      white-space: nowrap;
     }
 
     .nav {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255, 250, 240, .92);
-      border-bottom: 1px solid var(--line);
+      background: rgba(8, 8, 6, .96);
+      border-bottom: 1px solid rgba(246, 195, 28, .22);
       backdrop-filter: blur(18px);
     }
 
     .nav .shell {
-      min-height: 72px;
+      min-height: 58px;
       display: grid;
       grid-template-columns: auto 1fr auto;
       align-items: center;
-      gap: 24px;
+      gap: 18px;
     }
 
     .logo {
-      width: 150px;
+      width: 128px;
+      filter: brightness(1.08) contrast(1.08);
     }
 
     .links {
@@ -158,27 +173,15 @@
 
     .links a {
       min-width: 44px;
-      min-height: 44px;
+      min-height: 38px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      color: rgba(255, 255, 255, .86);
     }
 
     .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .icon-btn {
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: var(--white);
-      color: var(--ink);
-      font-size: 18px;
-      padding: 0;
+      display: none;
     }
 
     .hero {
@@ -358,8 +361,9 @@
     .hero-banner-copy b {
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: clamp(28px, 4.8vw, 58px);
-      line-height: .92;
+      line-height: 1.04;
       text-transform: uppercase;
+      overflow-wrap: break-word;
     }
 
     .hero-banner-copy em {
@@ -401,24 +405,25 @@
     h2,
     h3 {
       font-family: "Instrument Sans", Figtree, sans-serif;
-      line-height: .94;
+      line-height: 1.06;
       letter-spacing: 0;
       margin: 0;
+      overflow-wrap: break-word;
     }
 
     h1 {
       max-width: 960px;
-      font-size: clamp(34px, 5.6vw, 74px);
+      font-size: clamp(34px, 5.2vw, 66px);
       text-transform: uppercase;
     }
 
     h2 {
-      font-size: clamp(34px, 6vw, 76px);
+      font-size: clamp(30px, 5.3vw, 60px);
       text-transform: uppercase;
     }
 
     h3 {
-      font-size: clamp(22px, 2.8vw, 36px);
+      font-size: clamp(21px, 2.4vw, 32px);
       text-transform: uppercase;
     }
 
@@ -610,10 +615,7 @@
     }
 
     .offer-list li::before {
-      content: "+";
-      color: var(--gold);
-      margin-right: 8px;
-      font-weight: 900;
+      content: none;
     }
 
     .trust-row {
@@ -679,23 +681,12 @@
 
     .cro-item {
       display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr;
+      gap: 8px;
       align-items: center;
       min-height: 76px;
       padding: 14px 0;
       border-bottom: 1px solid var(--line);
-    }
-
-    .cro-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 6px;
-      background: var(--ink);
-      color: var(--gold-2);
-      font-weight: 900;
     }
 
     .cro-item b {
@@ -715,13 +706,15 @@
 
     .strip-track {
       display: flex;
-      width: max-content;
-      animation: marquee 24s linear infinite;
+      width: 100%;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 44px);
+      animation: none;
     }
 
     .strip span {
-      padding: 13px 18px;
-      font-size: 13px;
+      padding: 10px 0;
+      font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
       white-space: nowrap;
@@ -814,9 +807,9 @@
     .banner-copy b {
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: clamp(24px, 3.5vw, 44px);
-      line-height: .95;
+      line-height: 1.06;
       text-transform: uppercase;
-      overflow-wrap: anywhere;
+      overflow-wrap: break-word;
     }
 
     .banner-cta {
@@ -905,9 +898,9 @@
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: clamp(22px, 5vw, 34px);
       font-weight: 700;
-      line-height: 1;
+      line-height: 1.08;
       text-transform: uppercase;
-      overflow-wrap: anywhere;
+      overflow-wrap: break-word;
     }
 
     .category-copy span {
@@ -985,7 +978,8 @@
     .flash-deal strong {
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: clamp(34px, 5vw, 56px);
-      line-height: .9;
+      line-height: 1;
+      overflow-wrap: break-word;
     }
 
     .goal-quiz {
@@ -1166,7 +1160,6 @@
       backdrop-filter: blur(18px) saturate(1.18);
     }
 
-    .review-card,
     .cert-item {
       border-color: rgba(8, 8, 6, .12);
       background:
@@ -1526,10 +1519,7 @@
     }
 
     .proof-list span::before {
-      content: "+";
-      color: var(--gold);
-      margin-right: 8px;
-      font-weight: 900;
+      content: none;
     }
 
     .price {
@@ -1561,7 +1551,7 @@
       color: var(--gold-2);
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: 25px;
-      line-height: 1;
+      line-height: 1.08;
       margin-bottom: 6px;
     }
 
@@ -1649,7 +1639,7 @@
     .mini-product h3 {
       color: var(--white);
       font-size: 16px;
-      line-height: 1.08;
+      line-height: 1.18;
     }
 
     .mini-product p {
@@ -1708,7 +1698,7 @@
     .sticky-buy b {
       display: block;
       color: var(--gold-2);
-      line-height: 1;
+      line-height: 1.18;
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: 13px;
     }
@@ -1744,12 +1734,7 @@
     }
 
     .sticky-notice::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 4px rgba(27, 127, 59, .2);
+      content: none;
     }
 
     .sticky-trust {
@@ -1780,8 +1765,9 @@
 
     .proof-card b {
       font-family: "Instrument Sans", Figtree, sans-serif;
-      font-size: clamp(38px, 8vw, 82px);
-      line-height: .9;
+      font-size: clamp(34px, 6.6vw, 68px);
+      line-height: 1.02;
+      overflow-wrap: break-word;
     }
 
     .proof-card p {
@@ -1809,17 +1795,18 @@
 
     .review-marquee {
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       margin-inline: calc(var(--gutter) * -1);
-      padding-block: 8px 12px;
-      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      padding: 8px var(--gutter) 12px;
+      mask-image: none;
     }
 
     .review-track {
-      width: max-content;
-      display: flex;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
-      animation: reviewFlow 34s linear infinite;
+      animation: none;
     }
 
     .review-marquee:hover .review-track {
@@ -1833,13 +1820,13 @@
     }
 
     .review-card {
-      width: min(78vw, 430px);
+      width: 100%;
       border: 1px solid rgba(246, 195, 28, .26);
       border-radius: var(--radius);
       overflow: hidden;
       display: grid;
-      grid-template-columns: 130px 1fr;
-      min-height: 190px;
+      grid-template-columns: minmax(118px, 150px) minmax(0, 1fr);
+      min-height: 210px;
       background:
         linear-gradient(135deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .05));
       box-shadow: 0 24px 70px rgba(0, 0, 0, .26);
@@ -1858,6 +1845,7 @@
       display: grid;
       align-content: center;
       gap: 10px;
+      min-width: 0;
     }
 
     .stars {
@@ -1877,8 +1865,10 @@
     .review-card p {
       margin: 0;
       color: rgba(255, 255, 255, .82);
-      font-size: 17px;
+      font-size: 16px;
+      line-height: 1.45;
       font-weight: 700;
+      overflow-wrap: break-word;
     }
 
     .kit {
@@ -1936,7 +1926,6 @@
       backdrop-filter: blur(18px) saturate(1.18);
     }
 
-    .review-card,
     .cert-item {
       border-color: rgba(8, 8, 6, .12);
       background:
@@ -2202,31 +2191,34 @@
       }
 
       .logo {
-        width: 104px;
+        width: 92px;
       }
 
       .nav .shell > a[aria-label="One Science Nutrition home"] {
-        min-height: 44px;
+        min-height: 38px;
         display: inline-flex;
         align-items: center;
       }
 
       .nav .shell {
         grid-template-columns: auto 1fr auto;
-        min-height: 58px;
+        min-height: 46px;
         gap: 10px;
         padding-inline: 18px;
       }
 
-      .nav-actions {
-        gap: 8px;
+      .utility {
+        font-size: 9px;
       }
 
-      .icon-btn {
-        width: 44px;
-        height: 44px;
-        border-radius: 8px;
-        font-size: 17px;
+      .utility .shell {
+        min-height: 26px;
+        gap: 6px;
+        padding-inline: 12px;
+      }
+
+      .nav-actions {
+        gap: 8px;
       }
 
       .search {
@@ -2266,18 +2258,18 @@
 
       .review-marquee {
         margin-inline: calc(var(--gutter) * -1);
-        padding-left: var(--gutter);
+        padding-inline: var(--gutter);
       }
 
       .review-track {
+        grid-template-columns: 1fr;
         gap: 12px;
-        animation-duration: 28s;
       }
 
       .review-card {
-        width: min(86vw, 340px);
-        grid-template-columns: 108px 1fr;
-        min-height: 172px;
+        width: 100%;
+        grid-template-columns: 102px minmax(0, 1fr);
+        min-height: 174px;
       }
 
       .review-card div {
@@ -2286,6 +2278,7 @@
 
       .review-card p {
         font-size: 14px;
+        line-height: 1.45;
       }
 
       .sticky-buy {
@@ -2337,8 +2330,8 @@
   <header>
     <div class="utility">
       <div class="shell">
-        <span>Free India shipping above Rs. 999</span>
-        <span>Authentic import seal</span>
+        <span>Free shipping Rs. 999+</span>
+        <span>Authentic seal</span>
         <span>COD available</span>
       </div>
     </div>
@@ -2353,11 +2346,7 @@
           <a href="#proof">Proof</a>
           <a href="#reviews">Reviews</a>
         </div>
-        <div class="nav-actions">
-          <button class="icon-btn menu" type="button" aria-label="Open menu">=</button>
-          <button class="icon-btn search" type="button" aria-label="Search">/</button>
-          <button class="icon-btn" type="button" aria-label="Cart">0</button>
-        </div>
+        <div class="nav-actions" aria-hidden="true"></div>
       </div>
     </nav>
   </header>
@@ -2365,7 +2354,6 @@
   <main>
     <div class="strip" aria-hidden="true">
       <div class="strip-track">
-        <span>Tiger combo</span><span>Verified supplements</span><span>Free shipping</span><span>15% off code TIGER15</span><span>COD available</span><span>Fast dispatch</span>
         <span>Tiger combo</span><span>Verified supplements</span><span>Free shipping</span><span>15% off code TIGER15</span><span>COD available</span><span>Fast dispatch</span>
       </div>
     </div>
@@ -2548,7 +2536,7 @@
           <h2>Lifters keep coming back.</h2>
           <p>Real buyers, real routines, and stack feedback placed right where purchase intent is highest.</p>
         </div>
-        <div class="review-marquee" aria-label="Auto scrolling customer reviews">
+        <div class="review-marquee" aria-label="Customer reviews">
           <div class="review-track">
             <article class="review-card">
               <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="Customer holding One Science product">
@@ -2560,18 +2548,6 @@
             </article>
             <article class="review-card">
               <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="Customer reviewing One Science product">
-              <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
-            </article>
-            <article class="review-card" aria-hidden="true">
-              <img src="onescience-assets/1774823242__img_2070__original.jpeg" alt="">
-              <div><span class="stars">5.0 stars</span><p>"Clean mix, solid recovery, and the flavour is easy to repeat daily."</p></div>
-            </article>
-            <article class="review-card" aria-hidden="true">
-              <img src="onescience-assets/1774877454__1774877435141-img_9555__original.jpeg" alt="">
-              <div><span class="stars">5.0 stars</span><p>"The combo makes sense. Whey, creatine, pump and shaker in one go."</p></div>
-            </article>
-            <article class="review-card" aria-hidden="true">
-              <img src="onescience-assets/1781405604__1781405514128-img_6839__original.jpeg" alt="">
               <div><span class="stars">5.0 stars</span><p>"Looks premium on the shelf and performs well in the gym."</p></div>
             </article>
           </div>
@@ -2645,9 +2621,9 @@
 
     <section class="cro-band" aria-label="Purchase benefits">
       <div class="shell">
-        <div class="cro-item"><div class="cro-icon">1</div><div><b>Pick by goal</b><span>Muscle, strength, recovery, fat loss.</span></div></div>
-        <div class="cro-item"><div class="cro-icon">2</div><div><b>Bundle and save</b><span>Higher AOV stacks made obvious.</span></div></div>
-        <div class="cro-item"><div class="cro-icon">3</div><div><b>Checkout with trust</b><span>COD, dispatch, and authenticity cues.</span></div></div>
+        <div class="cro-item"><div><b>Pick by goal</b><span>Muscle, strength, recovery, fat loss.</span></div></div>
+        <div class="cro-item"><div><b>Bundle and save</b><span>Higher AOV stacks made obvious.</span></div></div>
+        <div class="cro-item"><div><b>Checkout with trust</b><span>COD, dispatch, and authenticity cues.</span></div></div>
       </div>
     </section>
 
@@ -2728,8 +2704,11 @@
   </footer>
   <script>
     const stickyBuy = document.querySelector('.sticky-buy');
+    const reviewsSection = document.querySelector('#reviews');
     const toggleStickyBuy = () => {
-      stickyBuy?.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.72);
+      const reviewsRect = reviewsSection?.getBoundingClientRect();
+      const reviewsVisible = reviewsRect && reviewsRect.top < window.innerHeight && reviewsRect.bottom > 0;
+      stickyBuy?.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.72 && !reviewsVisible);
     };
     toggleStickyBuy();
     window.addEventListener('scroll', toggleStickyBuy, { passive: true });
