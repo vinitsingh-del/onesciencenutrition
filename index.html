@@ -1195,6 +1195,38 @@
       gap: 14px;
     }
 
+    #goals {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 22% 14%, rgba(255, 226, 112, .18), transparent 28%),
+        linear-gradient(145deg, #090807 0%, #17130d 46%, #050505 100%);
+      color: var(--white);
+      padding-block: clamp(54px, 8vw, 110px);
+    }
+
+    #goals::before {
+      content: "";
+      position: absolute;
+      inset: -18% -8%;
+      background:
+        radial-gradient(ellipse at 18% 74%, rgba(246, 195, 28, .2), transparent 30%),
+        radial-gradient(ellipse at 76% 18%, rgba(255, 242, 168, .14), transparent 24%);
+      filter: blur(28px);
+      opacity: .8;
+      transform: translate3d(0, calc(var(--goal-parallax, 0) * -18px), 0);
+      pointer-events: none;
+    }
+
+    #goals .shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    #goals .section-head p:not(.kicker) {
+      color: rgba(255, 255, 255, .72);
+    }
+
     .goal-card {
       min-height: 300px;
       position: relative;
@@ -1204,6 +1236,9 @@
       background: var(--ink);
       color: var(--white);
       box-shadow: var(--shadow);
+      transform: translate3d(0, calc(var(--goal-card-shift, 0px) + (var(--goal-parallax, 0) * var(--goal-depth, 0px))), 0);
+      transition: transform .18s ease, border-color .18s ease;
+      will-change: transform;
     }
 
     .goal-card img {
@@ -1213,11 +1248,13 @@
       height: 100%;
       object-fit: cover;
       opacity: .74;
+      transform: scale(1.12) translate3d(0, calc(var(--goal-parallax, 0) * var(--image-depth, -18px)), 0);
       transition: transform .5s ease;
+      will-change: transform;
     }
 
     .goal-card:hover img {
-      transform: scale(1.04);
+      transform: scale(1.17) translate3d(0, calc(var(--goal-parallax, 0) * var(--image-depth, -18px)), 0);
     }
 
     .goal-card::after {
@@ -1225,14 +1262,22 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: linear-gradient(0deg, rgba(8, 8, 6, .86), rgba(8, 8, 6, .08));
+      background:
+        linear-gradient(0deg, rgba(8, 8, 6, .94), rgba(8, 8, 6, .58) 30%, rgba(8, 8, 6, .08) 70%),
+        linear-gradient(90deg, rgba(8, 8, 6, .52), rgba(8, 8, 6, 0));
     }
 
     .goal-card-content {
       position: absolute;
-      inset: auto 0 0;
-      padding: 22px;
+      inset: auto 12px 12px;
+      border: 1px solid rgba(255, 226, 112, .18);
+      border-radius: 8px;
+      padding: 16px;
+      background: linear-gradient(135deg, rgba(8, 8, 6, .74), rgba(8, 8, 6, .48));
+      backdrop-filter: blur(12px);
       z-index: 1;
+      transform: translate3d(0, calc(var(--goal-parallax, 0) * var(--copy-depth, 10px)), 0);
+      will-change: transform;
     }
 
     .goal-card p {
@@ -2173,6 +2218,13 @@
         scroll-behavior: auto !important;
         transition: none !important;
       }
+
+      #goals,
+      .goal-card,
+      .goal-card img,
+      .goal-card-content {
+        transform: none !important;
+      }
     }
   </style>
 </head>
@@ -2274,6 +2326,39 @@
           <a class="category-pill" href="#featured">
             <span class="category-copy"><small>Blood flow</small><b>Pump</b><span>Stack support for volume days.</span><em class="category-action">Shop pump</em></span>
             <img src="onescience-assets/cutouts/nitra-cutout.png" alt="Pump category">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Shop by goal</p>
+          <h2>Desi gym logic, premium shelf presence.</h2>
+          <p>Fast decisions for lifters: bulk clean, recover hard, stay sharp, or build the everyday stack.</p>
+        </div>
+        <div class="goal-grid">
+          <a class="goal-card" href="#featured" style="--goal-depth: -14px; --image-depth: -28px; --copy-depth: 12px;">
+            <img src="onescience-assets/Shop-By-goal-section2.jpg" alt="Athlete training with supplements">
+            <div class="goal-card-content">
+              <h3>Lean muscle</h3>
+              <p>Whey-forward stacks for daily protein, training recovery, and cleaner macro discipline.</p>
+            </div>
+          </a>
+          <a class="goal-card" href="#featured" style="--goal-depth: 10px; --image-depth: -22px; --copy-depth: 8px;">
+            <img src="onescience-assets/Shop-By-goal-section3.jpg" alt="Training goal product visual">
+            <div class="goal-card-content">
+              <h3>Strength</h3>
+              <p>Creatine and pre-workout combos tuned for progressive overload weeks.</p>
+            </div>
+          </a>
+          <a class="goal-card" href="#featured" style="--goal-depth: -8px; --image-depth: -18px; --copy-depth: 10px;">
+            <img src="onescience-assets/One-Whey.-Fourteen-Flavors-section.jpg" alt="One Whey flavour collection">
+            <div class="goal-card-content">
+              <h3>Flavour flex</h3>
+              <p>Chocolate, muffin, fudge and daily-driver flavours built for repeat scoops.</p>
+            </div>
           </a>
         </div>
       </div>
@@ -2428,39 +2513,6 @@
       </div>
     </section>
 
-    <section id="goals">
-      <div class="shell">
-        <div class="section-head">
-          <p class="kicker">Shop by goal</p>
-          <h2>Desi gym logic, premium shelf presence.</h2>
-          <p>Fast decisions for lifters: bulk clean, recover hard, stay sharp, or build the everyday stack.</p>
-        </div>
-        <div class="goal-grid">
-          <a class="goal-card" href="#featured">
-            <img src="onescience-assets/Shop-By-goal-section2.jpg" alt="Athlete training with supplements">
-            <div class="goal-card-content">
-              <h3>Lean muscle</h3>
-              <p>Whey-forward stacks for daily protein, training recovery, and cleaner macro discipline.</p>
-            </div>
-          </a>
-          <a class="goal-card" href="#featured">
-            <img src="onescience-assets/Shop-By-goal-section3.jpg" alt="Training goal product visual">
-            <div class="goal-card-content">
-              <h3>Strength</h3>
-              <p>Creatine and pre-workout combos tuned for progressive overload weeks.</p>
-            </div>
-          </a>
-          <a class="goal-card" href="#featured">
-            <img src="onescience-assets/One-Whey.-Fourteen-Flavors-section.jpg" alt="One Whey flavour collection">
-            <div class="goal-card-content">
-              <h3>Flavour flex</h3>
-              <p>Chocolate, muffin, fudge and daily-driver flavours built for repeat scoops.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <section class="video-proof" aria-label="Training video banner">
       <div class="shell video-layout">
         <div class="video-copy">
@@ -2565,6 +2617,18 @@
     };
     toggleStickyBuy();
     window.addEventListener('scroll', toggleStickyBuy, { passive: true });
+
+    const goalsSection = document.querySelector('#goals');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updateGoalParallax = () => {
+      if (!goalsSection || reduceMotion.matches) return;
+      const rect = goalsSection.getBoundingClientRect();
+      const progress = Math.max(-1, Math.min(1, (window.innerHeight / 2 - rect.top) / Math.max(rect.height, 1)));
+      goalsSection.style.setProperty('--goal-parallax', progress.toFixed(3));
+    };
+    updateGoalParallax();
+    window.addEventListener('scroll', updateGoalParallax, { passive: true });
+    window.addEventListener('resize', updateGoalParallax);
   </script>
 </body>
 </html>

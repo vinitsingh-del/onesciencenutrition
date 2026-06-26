@@ -238,3 +238,17 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Shop By Goal Parallax Reorder
+
+- [x] Moved Shop by goal directly below Shop by category.
+- [x] Rebuilt Shop by goal as a dark premium scrolling parallax section.
+- [x] Added layered card, image, copy, and background parallax offsets.
+- [x] Added reduced-motion protection for the parallax transforms.
+- [x] Built static output screenshots.
+  - `outputs/goal-parallax-desktop.png`
+  - `outputs/goal-parallax-mobile.png`
+- [x] Tested twice after Shop by goal reorder/parallax update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.
