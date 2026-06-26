@@ -266,3 +266,15 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Mobile Header Bar Polish
+
+- [x] Reduced mobile nav bar height by about 20%.
+- [x] Tightened logo, icon button spacing, and mobile nav padding.
+- [x] Kept mobile icon buttons at 44px touch size.
+- [x] Built static output screenshot.
+  - `outputs/mobile-header-compact.png`
+- [x] Tested twice after mobile header update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.
