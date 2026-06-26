@@ -222,3 +222,19 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Focused Tiger Dust Animation
+
+- [x] Scoped moving dust animation only to the Tiger hero banner.
+- [x] Removed moving dust from the other hero cards and featured product spotlight.
+- [x] Verified computed animation names in browser.
+  - Tiger banner dust: `tigerDustFlow`
+  - Other hero card dust: `none`
+  - Featured spotlight dust: `none`
+- [x] Built static output screenshots.
+  - `outputs/tiger-dust-focused-desktop.png`
+  - `outputs/tiger-dust-focused-mobile.png`
+- [x] Tested twice after focused dust update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.
