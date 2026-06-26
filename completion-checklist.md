@@ -278,3 +278,15 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Compact Sticky CTA
+
+- [x] Reduced sticky CTA visual size by about 30%.
+- [x] Kept BUY button at a 44px mobile tap target.
+- [x] Tightened notice, price, trust badges, padding, and spacing.
+- [x] Built static output screenshot.
+  - `outputs/mobile-cta-compact.png`
+- [x] Tested twice after sticky CTA compact update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.
