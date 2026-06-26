@@ -206,3 +206,19 @@
   - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
   - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
 - [x] Done.
+
+## June 27 Product Cutouts And Metallic Gold
+
+- [x] Removed harsh white product backgrounds from visible product showcases.
+- [x] Generated hard-cropped transparent product cutouts from original assets.
+- [x] Swapped category, product rail, featured stack, and kit product imagery to cutout PNGs.
+- [x] Reworked product cards onto dark glass/metal stages so packaging is showcased cleanly.
+- [x] Upgraded flat gold fills to metallic gold gradients with subtle shine.
+- [x] Built static output screenshots.
+  - `outputs/cutout-categories-desktop.png`
+  - `outputs/cutout-featured-desktop.png`
+  - `outputs/cutout-products-mobile.png`
+- [x] Tested twice after product cutout and metallic gold update.
+  - Pass 1: mobile 375, tablet 768, desktop 1440 passed.
+  - Pass 2: mobile 375, tablet 768, desktop 1440 passed.
+- [x] Done.

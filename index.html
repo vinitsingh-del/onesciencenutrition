@@ -28,6 +28,8 @@
       --carbon: #23201a;
       --gold: #f6c31c;
       --gold-2: #ffe16b;
+      --gold-metal: linear-gradient(112deg, #7d5206 0%, #bf8610 18%, #ffdf62 34%, #fff2a8 45%, #c69216 58%, #6c4706 72%, #f4c43a 100%);
+      --gold-metal-soft: linear-gradient(135deg, rgba(255, 226, 112, .96), rgba(184, 119, 11, .9) 44%, rgba(255, 246, 178, .92) 58%, rgba(156, 95, 8, .92));
       --smoke: #f6f2e8;
       --paper: #fffaf0;
       --line: rgba(8, 8, 6, .14);
@@ -347,7 +349,8 @@
       display: inline-flex;
       align-items: center;
       padding: 0 14px;
-      background: var(--gold);
+      background: var(--gold-metal);
+      background-size: 180% 100%;
       color: var(--ink);
       font-style: normal;
       font-size: 12px;
@@ -371,7 +374,7 @@
       content: "";
       width: 42px;
       height: 2px;
-      background: var(--gold);
+      background: var(--gold-metal);
     }
 
     h1,
@@ -466,7 +469,7 @@
     }
 
     .banner-dots span:first-child {
-      background: var(--gold);
+      background: var(--gold-metal);
     }
 
     .banner-window {
@@ -511,7 +514,8 @@
     }
 
     .button.gold {
-      background: var(--gold);
+      background: var(--gold-metal);
+      background-size: 180% 100%;
       color: var(--ink);
     }
 
@@ -635,7 +639,8 @@
     }
 
     .strip {
-      background: var(--gold);
+      background: var(--gold-metal);
+      background-size: 180% 100%;
       border-block: 1px solid var(--ink);
       color: var(--ink);
       overflow: hidden;
@@ -802,7 +807,8 @@
       align-items: center;
       margin-top: 4px;
       padding: 0 13px;
-      background: var(--gold);
+      background: var(--gold-metal);
+      background-size: 180% 100%;
       color: var(--ink);
       font-size: 12px;
       font-weight: 900;
@@ -831,14 +837,16 @@
       border: 1px solid rgba(8, 8, 6, .12);
       border-radius: var(--radius);
       background:
-        linear-gradient(135deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .58)),
-        var(--white);
+        radial-gradient(circle at 82% 16%, rgba(255, 226, 112, .24), transparent 32%),
+        linear-gradient(135deg, rgba(27, 24, 16, .94), rgba(6, 6, 5, .86));
       display: grid;
       grid-template-columns: minmax(0, 1fr) 118px;
       gap: 14px;
       align-items: center;
       padding: 18px;
-      box-shadow: 0 18px 44px rgba(8, 8, 6, .08);
+      box-shadow: 0 20px 54px rgba(8, 8, 6, .22);
+      color: var(--white);
+      overflow: hidden;
       transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
     }
 
@@ -850,10 +858,11 @@
 
     .category-pill img {
       width: 100%;
-      height: 136px;
+      height: 150px;
       object-fit: contain;
       align-self: center;
       justify-self: end;
+      filter: drop-shadow(0 20px 20px rgba(0, 0, 0, .52));
       transform-origin: 50% 80%;
       animation: productBob 6.4s ease-in-out infinite;
     }
@@ -865,14 +874,14 @@
     }
 
     .category-copy small {
-      color: #9a7500;
+      color: var(--gold-2);
       font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
     }
 
     .category-copy b {
-      color: var(--ink);
+      color: var(--white);
       font-family: "Instrument Sans", Figtree, sans-serif;
       font-size: clamp(22px, 5vw, 34px);
       font-weight: 700;
@@ -882,7 +891,7 @@
     }
 
     .category-copy span {
-      color: var(--muted);
+      color: rgba(255, 255, 255, .68);
       font-size: 14px;
       font-weight: 800;
     }
@@ -890,12 +899,12 @@
     .category-action {
       width: fit-content;
       min-height: 34px;
-      border: 1px solid rgba(8, 8, 6, .14);
+      border: 1px solid rgba(255, 226, 112, .34);
       border-radius: 999px;
       display: inline-flex;
       align-items: center;
       padding: 0 12px;
-      color: var(--ink);
+      color: var(--gold-2);
       font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
@@ -903,7 +912,8 @@
 
     .flash-sale {
       padding-block: 0;
-      background: var(--gold);
+      background: var(--gold-metal);
+      background-size: 180% 100%;
       border-block: 1px solid var(--ink);
     }
 
@@ -1117,11 +1127,9 @@
 
     .hero-offer,
     .stats-panel,
-    .category-pill,
     .flash-deal,
     .spotlight,
     .info-card,
-    .mini-product,
     .goal-card,
     .proof-card,
     .review-card,
@@ -1138,8 +1146,6 @@
       backdrop-filter: blur(18px) saturate(1.18);
     }
 
-    .category-pill,
-    .mini-product,
     .review-card,
     .cert-item {
       border-color: rgba(8, 8, 6, .12);
@@ -1223,7 +1229,7 @@
     .product-stage {
       display: grid;
       gap: 20px;
-      align-items: stretch;
+      align-items: start;
     }
 
     .spotlight {
@@ -1234,7 +1240,7 @@
       min-height: 560px;
       padding: clamp(18px, 4vw, 42px);
       display: grid;
-      align-items: end;
+      align-items: center;
       position: relative;
       overflow: hidden;
     }
@@ -1266,8 +1272,8 @@
     .spotlight img {
       position: relative;
       z-index: 2;
-      width: min(92%, 760px);
-      margin: 0 auto;
+      width: min(108%, 880px);
+      margin: auto auto -3%;
       filter: drop-shadow(0 34px 34px rgba(0, 0, 0, .5));
       transform-origin: 50% 82%;
       animation: heroProductFloat 6.8s ease-in-out infinite;
@@ -1278,7 +1284,8 @@
       z-index: 4;
       top: 18px;
       left: 18px;
-      background: var(--gold);
+      background: var(--gold-metal);
+      background-size: 180% 100%;
       color: var(--ink);
       padding: 10px 12px;
       border-radius: 6px;
@@ -1300,7 +1307,7 @@
     }
 
     .buy-box {
-      background: var(--gold);
+      background: var(--gold-metal-soft);
       color: var(--ink);
       border: 0;
     }
@@ -1423,28 +1430,34 @@
     }
 
     .mini-product {
-      background: var(--white);
-      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 55% 4%, rgba(255, 226, 112, .2), transparent 34%),
+        linear-gradient(140deg, rgba(28, 25, 18, .96), rgba(9, 8, 6, .92));
+      border: 1px solid rgba(246, 195, 28, .26);
       border-radius: var(--radius);
       overflow: hidden;
       min-height: 100%;
       display: flex;
       flex-direction: column;
+      color: var(--white);
     }
 
     .mini-product figure {
       aspect-ratio: 1 / 1;
       margin: 0;
-      background: #f4efe4;
+      background:
+        radial-gradient(ellipse at 50% 84%, rgba(255, 223, 98, .22), transparent 42%),
+        linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0));
       display: grid;
       place-items: center;
-      padding: 10px;
+      padding: 4px;
     }
 
     .mini-product img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      filter: drop-shadow(0 24px 24px rgba(0, 0, 0, .56));
       transform-origin: 50% 82%;
       animation: productBob 6.8s ease-in-out infinite;
     }
@@ -1467,6 +1480,24 @@
       }
     }
 
+    @keyframes metallicSweep {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .hero-banner-copy em,
+    .banner-cta,
+    .button.gold,
+    .strip,
+    .flash-sale,
+    .spotlight-badge {
+      animation: metallicSweep 8s ease-in-out infinite;
+    }
+
     .mini-product div {
       padding: 16px;
       display: grid;
@@ -1474,13 +1505,14 @@
     }
 
     .mini-product h3 {
+      color: var(--white);
       font-size: 16px;
       line-height: 1.08;
     }
 
     .mini-product p {
       margin: 0;
-      color: var(--muted);
+      color: rgba(255, 255, 255, .68);
       font-size: 14px;
     }
 
@@ -1727,7 +1759,9 @@
 
     .kit-image {
       align-self: end;
-      background: var(--gold);
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255, 255, 255, .18), transparent 26%),
+        var(--gold-metal-soft);
       border-radius: var(--radius) var(--radius) 0 0;
       padding: 18px 18px 0;
     }
@@ -1736,15 +1770,14 @@
       margin: 0 auto;
       max-height: 620px;
       object-fit: contain;
+      filter: drop-shadow(0 28px 28px rgba(0, 0, 0, .44));
     }
 
     .hero-offer,
     .stats-panel,
-    .category-pill,
     .flash-deal,
     .spotlight,
     .info-card,
-    .mini-product,
     .goal-card,
     .proof-card,
     .review-card,
@@ -1761,8 +1794,6 @@
       backdrop-filter: blur(18px) saturate(1.18);
     }
 
-    .category-pill,
-    .mini-product,
     .review-card,
     .cert-item {
       border-color: rgba(8, 8, 6, .12);
@@ -1771,8 +1802,7 @@
     }
 
     .buy-box {
-      background:
-        linear-gradient(135deg, rgba(246, 195, 28, .92), rgba(255, 225, 107, .64));
+      background: var(--gold-metal-soft);
     }
 
     footer {
@@ -2210,23 +2240,23 @@
         <div class="category-row">
           <a class="category-pill" href="#featured">
             <span class="category-copy"><small>Daily muscle</small><b>Protein</b><span>Whey stacks for clean recovery.</span><em class="category-action">Shop protein</em></span>
-            <img src="onescience-assets/Front_38996d63-5b27-4ede-af1d-79e78bb545cd.png" alt="Whey protein category">
+            <img src="onescience-assets/cutouts/whey-cutout.png" alt="Whey protein category">
           </a>
           <a class="category-pill" href="#featured">
             <span class="category-copy"><small>Strength output</small><b>Creatine</b><span>Micronized power for repeat sets.</span><em class="category-action">Shop creatine</em></span>
-            <img src="onescience-assets/MicronizedCreatine_250G_Top.png" alt="Creatine category">
+            <img src="onescience-assets/cutouts/creatine-cutout.png" alt="Creatine category">
           </a>
           <a class="category-pill" href="#featured">
             <span class="category-copy"><small>Training intensity</small><b>Pre-workout</b><span>Focus and pump before hard sessions.</span><em class="category-action">Shop pre</em></span>
-            <img src="onescience-assets/Sniper_Pineapple_front_c818892f-4b21-4e01-a4a4-2bda792fecc5.png" alt="Pre workout category">
+            <img src="onescience-assets/cutouts/sniper-cutout.png" alt="Pre workout category">
           </a>
           <a class="category-pill" href="#featured">
             <span class="category-copy"><small>Daily essentials</small><b>Wellness</b><span>Support for disciplined routines.</span><em class="category-action">Shop wellness</em></span>
-            <img src="onescience-assets/Omega_3.jpg" alt="Wellness category">
+            <img src="onescience-assets/cutouts/omega-cutout.png" alt="Wellness category">
           </a>
           <a class="category-pill" href="#featured">
             <span class="category-copy"><small>Blood flow</small><b>Pump</b><span>Stack support for volume days.</span><em class="category-action">Shop pump</em></span>
-            <img src="onescience-assets/nitra_1.png" alt="Pump category">
+            <img src="onescience-assets/cutouts/nitra-cutout.png" alt="Pump category">
           </a>
         </div>
       </div>
@@ -2260,7 +2290,7 @@
         <div class="product-stage">
           <article class="spotlight" aria-label="Premium whey protein bundle">
             <span class="spotlight-badge">Best value stack</span>
-            <img src="onescience-assets/1_0eacc77f-f0ce-41ca-a0d6-7b77c2b38ecc.jpg" alt="One Science Premium Whey Protein with creatine, pump, and shaker">
+            <img src="onescience-assets/cutouts/hero-stack-cutout.png" alt="One Science Premium Whey Protein with creatine, pump, and shaker">
           </article>
           <aside class="product-info">
             <div class="info-card buy-box">
@@ -2339,19 +2369,19 @@
         </div>
         <div class="rail">
           <article class="mini-product">
-            <figure><img src="onescience-assets/Front_38996d63-5b27-4ede-af1d-79e78bb545cd.png" alt="One Science whey product"></figure>
+            <figure><img src="onescience-assets/cutouts/whey-cutout.png" alt="One Science whey product"></figure>
             <div><h3>100% Whey</h3><p>Daily protein foundation for muscle repair.</p></div>
           </article>
           <article class="mini-product">
-            <figure><img src="onescience-assets/MicronizedCreatine_250G_Top.png" alt="One Science micronized creatine"></figure>
+            <figure><img src="onescience-assets/cutouts/creatine-cutout.png" alt="One Science micronized creatine"></figure>
             <div><h3>Creatine</h3><p>Strength output and repeat set support.</p></div>
           </article>
           <article class="mini-product">
-            <figure><img src="onescience-assets/Sniper_Pineapple_front_c818892f-4b21-4e01-a4a4-2bda792fecc5.png" alt="One Science Sniper pre workout"></figure>
+            <figure><img src="onescience-assets/cutouts/sniper-cutout.png" alt="One Science Sniper pre workout"></figure>
             <div><h3>Sniper</h3><p>High-intensity pre-workout focus.</p></div>
           </article>
           <article class="mini-product">
-            <figure><img src="onescience-assets/Omega_3.jpg" alt="One Science Omega 3"></figure>
+            <figure><img src="onescience-assets/cutouts/omega-cutout.png" alt="One Science Omega 3"></figure>
             <div><h3>Omega 3</h3><p>Daily wellness for disciplined routines.</p></div>
           </article>
         </div>
@@ -2489,7 +2519,7 @@
           <a class="button gold" href="#featured">Start with the stack</a>
         </div>
         <div class="kit-image">
-          <img src="onescience-assets/nitra_1.png" alt="One Science Nitra product pack">
+          <img src="onescience-assets/cutouts/nitra-cutout.png" alt="One Science Nitra product pack">
         </div>
       </div>
     </section>
