@@ -321,15 +321,16 @@
     }
 
     .hero-tiger {
+      min-height: 376px;
       background:
         radial-gradient(circle at 72% 18%, rgba(255, 226, 112, .22), transparent 28%),
         linear-gradient(135deg, rgba(13, 12, 8, .98), rgba(5, 5, 5, .94));
     }
 
     .hero-tiger .hero-card-bg {
-      object-position: 58% 50%;
-      opacity: .64;
-      filter: saturate(1.02) contrast(1.02);
+      object-position: center;
+      opacity: .94;
+      filter: saturate(1.04) contrast(1.04);
       animation: none;
     }
 
@@ -365,8 +366,8 @@
 
     .hero-tiger::before {
       background:
-        linear-gradient(90deg, rgba(8, 8, 6, .94), rgba(8, 8, 6, .72) 50%, rgba(8, 8, 6, .42)),
-        linear-gradient(180deg, rgba(8, 8, 6, .18), rgba(8, 8, 6, .78));
+        linear-gradient(90deg, rgba(8, 8, 6, .82), rgba(8, 8, 6, .42) 50%, rgba(8, 8, 6, .16)),
+        linear-gradient(180deg, rgba(8, 8, 6, .08), rgba(8, 8, 6, .58));
     }
 
     .hero-tiger::after {
@@ -2328,8 +2329,12 @@
       }
 
       .hero-tiger .hero-card-bg {
-        object-position: 56% center;
-        opacity: .58;
+        object-position: center;
+        opacity: .9;
+      }
+
+      .hero-tiger {
+        min-height: 315px;
       }
 
       .hero-tiger .hero-card-product {
@@ -2537,7 +2542,7 @@
         </div>
         <div class="hero-banner-grid" aria-label="Hero banner choices">
           <a class="hero-banner-card hero-tiger" href="#featured">
-            <img class="hero-card-bg" src="onescience-assets/tiger-science-card-poster.png" alt="Tiger Shroff One Science performance banner">
+            <img class="hero-card-bg" src="onescience-assets/tiger-title-card-bg.svg" alt="Tiger Shroff One Science performance banner">
             <img class="hero-card-product" src="onescience-assets/whey-pack-cutout.png" alt="" aria-hidden="true">
             <span class="hero-banner-copy"><small>Trusted by Tiger</small><b>Train with the headline stack</b><em>Claim Tiger stack</em></span>
           </a>
